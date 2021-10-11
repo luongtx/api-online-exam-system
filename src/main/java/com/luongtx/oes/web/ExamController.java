@@ -22,8 +22,8 @@ public class ExamController {
     }
 
     @GetMapping(path = "/{id}")
-    public Exam getExamById(@PathVariable(name = "id") Integer id) {
-        return examService.findById(id);
+    public Exam getExamDetailById(@PathVariable(name = "id") Integer id) {
+        return examService.findDetailById(id);
     }
 
     @GetMapping(path = {"/{id}/questions", "/{id}/start"})

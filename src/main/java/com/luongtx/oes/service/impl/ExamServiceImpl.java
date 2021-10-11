@@ -26,8 +26,14 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public Exam findById(Integer id) {
-        Exam exam = examRepository.findById(id).orElse(new Exam());
-        exam.setNumberOfQuestions(findNumberOfQuestions(id));
+        return examRepository.findById(id).orElse(new Exam());
+    }
+
+    @Override
+    public Exam findDetailById(Integer id) {
+        Exam exam = findById(id);
+        int numberOfQuestions = findNumberOfQuestions(id);
+        exam.setNumberOfQuestions(numberOfQuestions);
         return exam;
     }
 
@@ -56,7 +62,6 @@ public class ExamServiceImpl implements ExamService {
         return examRepository.findById(id).orElse(new Exam()).getQuestions();
     }
 
-    @Override
     public int findNumberOfQuestions(Integer id) {
         return questionRepository.countQuestionsByExamId(id);
     }

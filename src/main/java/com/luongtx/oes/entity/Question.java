@@ -43,7 +43,6 @@ public class Question {
 
     @ManyToOne
     @JoinColumn(name = "EXAM_ID")
-    @JsonBackReference
     private Exam exam;
 
     @ManyToOne

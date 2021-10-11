@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ExamService extends BaseService<Exam> {
     List<Question> findQuestionsByExamId(Integer id);
-    int findNumberOfQuestions(Integer id);
+    Exam findDetailById(Integer id);
 }

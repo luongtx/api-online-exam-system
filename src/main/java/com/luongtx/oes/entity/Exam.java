@@ -1,6 +1,6 @@
 package com.luongtx.oes.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -48,9 +48,10 @@ public class Exam {
     @Column(name = "BANNER_IMAGE")
     private String bannerImage;
 
+    @Transient
     private int numberOfQuestions;
 
     @OneToMany(mappedBy = "exam", fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @JsonIgnore
     private List<Question> questions = new ArrayList<>();
 }
