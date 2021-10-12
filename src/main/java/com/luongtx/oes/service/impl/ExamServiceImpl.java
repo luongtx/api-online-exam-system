@@ -1,5 +1,6 @@
 package com.luongtx.oes.service.impl;
 
+import com.luongtx.oes.dto.ExamResultDTO;
 import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.repository.ExamRepository;
@@ -35,6 +36,22 @@ public class ExamServiceImpl implements ExamService {
         int numberOfQuestions = findNumberOfQuestions(id);
         exam.setNumberOfQuestions(numberOfQuestions);
         return exam;
+    }
+
+    @Override
+    public ExamResultDTO evaluateResult(Integer examId, List<List<Integer>> listAnswers) {
+        ExamResultDTO resultDTO = new ExamResultDTO();
+        Exam exam = getById(examId);
+        List<Question> questions = exam.getQuestions();
+        int corrects = 0;
+        for (int i = 0; i < questions.size(); i++) {
+            if (listAnswers.get(i).equals(questions.get(i).getCorrectAnswers())) {
+                corrects++;
+            }
+        }
+        resultDTO.setScore((100 * corrects) / questions.size());
+        resultDTO.setStatus(resultDTO.getScore() >= exam.getPassingScore());
+        return resultDTO;
     }
 
     @Override

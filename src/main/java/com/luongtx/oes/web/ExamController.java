@@ -1,5 +1,6 @@
 package com.luongtx.oes.web;
 
+import com.luongtx.oes.dto.ExamResultDTO;
 import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.service.ExamService;
@@ -29,5 +30,10 @@ public class ExamController {
     @GetMapping(path = {"/{id}/questions", "/{id}/start"})
     public List<Question> getQuestionsByExamId(@PathVariable(name = "id") Integer id) {
         return examService.findQuestionsByExamId(id);
+    }
+
+    @PostMapping(path = "/{id}/submit")
+    public ExamResultDTO evaluateExamResult(@PathVariable("id") Integer examId, @RequestBody List<List<Integer>> listAnswers) {
+        return examService.evaluateResult(examId, listAnswers);
     }
 }

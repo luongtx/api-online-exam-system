@@ -11,6 +11,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -37,7 +38,7 @@ public class Question {
     @Column(name = "REG_DATE")
     private LocalDate regDate;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
     List<Answer> answers = new ArrayList<>();
 
@@ -49,4 +50,10 @@ public class Question {
     @JoinColumn(name = "CATEGORY_ID")
     @JsonBackReference
     private Category category;
+
+    public List<Integer> getCorrectAnswers() {
+        return answers.stream()
+                .filter(Answer::isCorrect).map(Answer::getId)
+                .collect(Collectors.toList());
+    }
 }
