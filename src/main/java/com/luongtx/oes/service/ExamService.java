@@ -7,7 +7,9 @@ import com.luongtx.oes.entity.Question;
 import java.util.List;
 
 public interface ExamService extends BaseService<Exam> {
-    List<Question> findQuestionsByExamId(Integer id);
-    Exam findDetailById(Integer id);
-    ExamResultDTO evaluateResult(Integer examId, List<List<Integer>> listAnswers);
+    List<Question> findQuestionsByExamId(Long id);
+
+    Exam findDetailById(Long id);
+
+    ExamResultDTO evaluateResult(Long examId, List<List<Long>> listAnswers);
 }

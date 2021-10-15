@@ -17,9 +17,9 @@ import java.time.LocalDate;
 @Table(name = "ANSWER")
 public class Answer {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
 
     @Column(name = "CONTENT")
     @Lob

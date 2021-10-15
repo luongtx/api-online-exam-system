@@ -21,9 +21,9 @@ import java.util.stream.Collectors;
 @Table(name = "QUESTION")
 public class Question {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
 
     @Column(name = "CONTENT")
     @Lob
@@ -51,7 +51,7 @@ public class Question {
     @JsonBackReference
     private Category category;
 
-    public List<Integer> getCorrectAnswers() {
+    public List<Long> getCorrectAnswers() {
         return answers.stream()
                 .filter(Answer::isCorrect).map(Answer::getId)
                 .collect(Collectors.toList());
