@@ -1,11 +1,13 @@
 package com.luongtx.oes.service;
 
-import com.luongtx.oes.dto.LoginDTO;
-import com.luongtx.oes.dto.RegisterDTO;
+import com.luongtx.oes.dto.LoginRequestDTO;
+import com.luongtx.oes.dto.LoginResponseDTO;
+import com.luongtx.oes.dto.RegisterRequestDTO;
+import com.luongtx.oes.dto.RegisterResponseDTO;
 import com.luongtx.oes.exception.ApplicationUserException;
 
 public interface AuthenticationService {
-    String login(LoginDTO loginDTO) throws ApplicationUserException;
+    LoginResponseDTO login(LoginRequestDTO loginRequestDTO) throws ApplicationUserException;
 
-    String register(RegisterDTO registerDTO) throws ApplicationUserException;
+    RegisterResponseDTO register(RegisterRequestDTO registerRequestDTO) throws ApplicationUserException;
 }

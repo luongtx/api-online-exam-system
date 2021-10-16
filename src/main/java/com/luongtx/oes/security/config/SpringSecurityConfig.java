@@ -33,8 +33,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/user").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/", "/login", "/logout", "/register").permitAll()
+                .antMatchers("/", "/login", "/logout", "/register", "/exams", "/exams/*").permitAll()
                 .antMatchers("/**").authenticated();
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }

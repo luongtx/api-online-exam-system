@@ -1,8 +1,10 @@
 package com.luongtx.oes.web;
 
 
-import com.luongtx.oes.dto.LoginDTO;
-import com.luongtx.oes.dto.RegisterDTO;
+import com.luongtx.oes.dto.LoginRequestDTO;
+import com.luongtx.oes.dto.LoginResponseDTO;
+import com.luongtx.oes.dto.RegisterRequestDTO;
+import com.luongtx.oes.dto.RegisterResponseDTO;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +25,14 @@ public class AuthenticationController {
     AuthenticationService authenticationService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@Valid @RequestBody LoginDTO loginDTO) throws ApplicationUserException {
-        String result = authenticationService.login(loginDTO);
-        return new ResponseEntity<>(result, HttpStatus.OK);
+    public ResponseEntity<LoginResponseDTO> login(@Valid @RequestBody LoginRequestDTO loginRequestDTO) throws ApplicationUserException {
+        LoginResponseDTO responseDTO = authenticationService.login(loginRequestDTO);
+        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@Valid @RequestBody RegisterDTO registerDTO) throws ApplicationUserException {
-        String result = authenticationService.register(registerDTO);
+    public ResponseEntity<RegisterResponseDTO> register(@Valid @RequestBody RegisterRequestDTO registerRequestDTO) throws ApplicationUserException {
+        RegisterResponseDTO result = authenticationService.register(registerRequestDTO);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

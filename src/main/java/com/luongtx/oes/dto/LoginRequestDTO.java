@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 @NoArgsConstructor
-public class LoginDTO {
+public class LoginRequestDTO {
 
     @NotBlank(message = ValidationConstant.REQUIRED_USERNAME)
     private String username;

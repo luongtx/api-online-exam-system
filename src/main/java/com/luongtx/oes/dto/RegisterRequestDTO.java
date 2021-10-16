@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RegisterDTO {
+public class RegisterRequestDTO {
 
     @NotBlank(message = ValidationConstant.REQUIRED_USERNAME)
     private String username;

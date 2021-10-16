@@ -1,7 +1,6 @@
 package com.luongtx.oes.service.impl;
 
 
-import com.luongtx.oes.constants.ApplicationMessageConstant;
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.exception.ApplicationUserException;
@@ -31,7 +30,7 @@ public class ProfileServiceImpl implements ProfileService {
     }
 
     @Override
-    public String updateCurrentUserProfile(String userToken, ProfileDTO profileDTO) {
+    public void updateCurrentUserProfile(String userToken, ProfileDTO profileDTO) {
         try {
             Profile profile = retrieveProfileFromToken(userToken);
             profile.setEmail(profileDTO.getEmail());
@@ -45,7 +44,6 @@ public class ProfileServiceImpl implements ProfileService {
             log.error(e.getMessage());
             throw new ApplicationUserException(e.getMessage());
         }
-        return ApplicationMessageConstant.SUCCESSFULLY_UPDATE_PROFILE;
     }
 
     ProfileDTO convertToProfileDTO(Profile profile) {

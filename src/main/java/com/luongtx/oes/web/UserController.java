@@ -27,10 +27,10 @@ public class UserController {
     }
 
     @PutMapping("/profile/update")
-    public ResponseEntity<String> updateUserProfile(@RequestHeader("Authorization") String userToken,
-                                                    @Valid @RequestBody ProfileDTO profileDTO) {
-        String result = profileService.updateCurrentUserProfile(userToken, profileDTO);
-        return new ResponseEntity<>(result, HttpStatus.OK);
+    public ResponseEntity<Void> updateUserProfile(@RequestHeader("Authorization") String userToken,
+                                                  @Valid @RequestBody ProfileDTO profileDTO) {
+        profileService.updateCurrentUserProfile(userToken, profileDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 

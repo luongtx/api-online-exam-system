@@ -1,8 +1,10 @@
 package com.luongtx.oes.service.impl;
 
 import com.luongtx.oes.constants.ApplicationMessageConstant;
-import com.luongtx.oes.dto.LoginDTO;
-import com.luongtx.oes.dto.RegisterDTO;
+import com.luongtx.oes.dto.LoginRequestDTO;
+import com.luongtx.oes.dto.LoginResponseDTO;
+import com.luongtx.oes.dto.RegisterRequestDTO;
+import com.luongtx.oes.dto.RegisterResponseDTO;
 import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.entity.User;
 import com.luongtx.oes.exception.ApplicationUserException;
@@ -52,21 +54,24 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     JwtTokenUtil jwtTokenUtil;
 
     @Override
-    public String login(LoginDTO loginDTO) throws ApplicationUserException {
+    public LoginResponseDTO login(LoginRequestDTO loginDTO) throws ApplicationUserException {
+        LoginResponseDTO responseDTO = new LoginResponseDTO();
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginDTO.getUsername(), loginDTO.getPassword())
             );
         } catch (BadCredentialsException e) {
-            throw new ApplicationUserException("Incorrect username or password");
+            throw new ApplicationUserException(ApplicationMessageConstant.INCORRECT_USER_NAME_PASSWORD);
         }
         final UserDetails userDetails = userDetailsService.loadUserByUsername(loginDTO.getUsername());
-        return jwtTokenUtil.generateToken(userDetails);
+        responseDTO.setToken(jwtTokenUtil.generateToken(userDetails));
+        return responseDTO;
     }
 
     @Override
     @Transactional
-    public String register(RegisterDTO registerDTO) throws ApplicationUserException {
+    public RegisterResponseDTO register(RegisterRequestDTO registerDTO) throws ApplicationUserException {
+        RegisterResponseDTO responseDTO = new RegisterResponseDTO();
         try {
             checkUserAvailability(registerDTO);
             User user = new User();
@@ -84,16 +89,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-        return ApplicationMessageConstant.SUCCESSFULLY_REGISTERED;
+        responseDTO.setMessage(ApplicationMessageConstant.SUCCESSFULLY_REGISTERED);
+        return responseDTO;
     }
 
-    private void checkUserAvailability(RegisterDTO registerDTO) throws ApplicationUserException {
+    private void checkUserAvailability(RegisterRequestDTO registerDTO) throws ApplicationUserException {
         if (userRepo.findUserByUsername(registerDTO.getUsername()) != null) {
-            throw new ApplicationUserException("This username has already taken by another user");
+            throw new ApplicationUserException(ApplicationMessageConstant.TAKEN_USER_NAME);
         }
     }
 
-    Profile constructProfile(RegisterDTO registerDTO, User user) {
+    Profile constructProfile(RegisterRequestDTO registerDTO, User user) {
         Profile profile = new Profile();
         profile.setEmail(registerDTO.getEmail());
         profile.setFullName(registerDTO.getFullName());
