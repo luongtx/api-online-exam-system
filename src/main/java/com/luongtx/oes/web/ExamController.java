@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/exams")
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class ExamController {
 
     @Autowired

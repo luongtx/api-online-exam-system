@@ -42,6 +42,7 @@ public class User {
     private Set<Role> roles;
 
     @OneToOne
+    @JoinColumn(name = "PROFILE_ID")
     private Profile profile;
 
 }

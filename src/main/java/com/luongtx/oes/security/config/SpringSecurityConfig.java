@@ -31,7 +31,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.csrf().disable().authorizeRequests()
+        http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/", "/login", "/logout", "/register", "/exams", "/exams/*").permitAll()
                 .antMatchers("/**").authenticated();
