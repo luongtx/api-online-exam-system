@@ -23,6 +23,8 @@ public class ProfileDTO {
 
     private String phoneNo;
 
+    private String imageSrc;
+
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDay;
 

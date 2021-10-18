@@ -106,6 +106,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         profile.setGender(registerDTO.getGender());
         profile.setBirthDay(registerDTO.getBirthDay());
         profile.setPhoneNo(registerDTO.getPhoneNo());
+        profile.setImageSrc(registerDTO.getImageSrc());
         profile.setUser(user);
         return profile;
     }

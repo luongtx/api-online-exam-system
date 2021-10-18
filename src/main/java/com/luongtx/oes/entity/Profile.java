@@ -36,6 +36,9 @@ public class Profile {
     @Column(name = "BIRTHDAY")
     private LocalDate birthDay;
 
+    @Column(name = "IMAGE")
+    private String imageSrc;
+
     @OneToOne
     @JoinColumn(name = "USER_ID")
     private User user;

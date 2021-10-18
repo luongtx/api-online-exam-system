@@ -11,5 +11,7 @@ public interface ExamService extends BaseService<Exam> {
 
     Exam findDetailById(Long id);
 
-    ExamResultDTO evaluateResult(Long examId, List<List<Long>> listAnswers);
+    ExamResultDTO evaluateResult(String userToken, Long examId, List<List<Long>> listAnswers);
+
+    List<ExamResultDTO> getRecentUserExams(String userToken);
 }

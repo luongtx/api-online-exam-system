@@ -41,6 +41,13 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
     private Set<Role> roles;
 
+    @ManyToMany
+    @JoinTable(name = "USER_EXAM",
+            joinColumns = @JoinColumn(name = "USER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "EXAM_ID")
+    )
+    private Set<Exam> exams;
+
     @OneToOne
     @JoinColumn(name = "PROFILE_ID")
     private Profile profile;

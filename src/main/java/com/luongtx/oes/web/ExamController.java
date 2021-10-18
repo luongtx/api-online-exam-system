@@ -38,8 +38,16 @@ public class ExamController {
     }
 
     @PostMapping(path = "/{id}/submit")
-    public ResponseEntity<ExamResultDTO> evaluateExamResult(@PathVariable("id") Long examId, @RequestBody List<List<Long>> listAnswers) {
-        ExamResultDTO examResultDTO = examService.evaluateResult(examId, listAnswers);
+    public ResponseEntity<ExamResultDTO> evaluateExamResult(@RequestHeader("Authorization") String userToken,
+                                                            @PathVariable("id") Long examId,
+                                                            @RequestBody List<List<Long>> listAnswers) {
+        ExamResultDTO examResultDTO = examService.evaluateResult(userToken, examId, listAnswers);
         return new ResponseEntity<>(examResultDTO, HttpStatus.OK);
+    }
+
+    @GetMapping(path = "recent")
+    public ResponseEntity<List<ExamResultDTO>> getRecentUserExams(@RequestHeader("Authorization") String userToken) {
+        List<ExamResultDTO> examResultDTOS = examService.getRecentUserExams(userToken);
+        return new ResponseEntity<>(examResultDTOS, HttpStatus.OK);
     }
 }

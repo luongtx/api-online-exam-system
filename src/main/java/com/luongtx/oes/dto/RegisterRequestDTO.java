@@ -30,4 +30,6 @@ public class RegisterRequestDTO {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDay;
 
+    private String imageSrc;
+
 }

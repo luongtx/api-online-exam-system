@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 
@@ -33,5 +34,10 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-
+    @PostMapping("/profile/upload-image")
+    public ResponseEntity<Void> uploadProfileImage(@RequestHeader("Authorization") String userToken,
+                                                   @RequestBody MultipartFile file) {
+        profileService.uploadProfileImage(userToken, file);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

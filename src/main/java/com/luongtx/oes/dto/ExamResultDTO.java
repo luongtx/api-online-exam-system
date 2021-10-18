@@ -1,15 +1,20 @@
 package com.luongtx.oes.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class ExamResultDTO {
+    private Long examId;
+    private String title;
+    private String description;
     private Integer score;
-    private boolean status;
+    private Integer passingScore;
+    private Boolean status;
+    private LocalDateTime finishedAt;
 }
