@@ -4999,7 +4999,7 @@ org.springframework.transaction.UnexpectedRollbackException: Transaction silentl
 2021-10-15 18:48:54,318 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-3] Authorized filter invocation [GET /user/1/profile] with attributes [authenticated]
 2021-10-15 18:48:54,319 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-3] Secured GET /user/1/profile
 2021-10-15 18:48:54,319 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/user/1/profile", parameters={}
-2021-10-15 18:48:54,321 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.UserController#getUserProfile(Long)
+2021-10-15 18:48:54,321 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(Long)
 2021-10-15 18:48:54,323 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-3] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 18:48:54,342 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ where profile0_.USER_ID=?
 2021-10-15 18:48:54,348 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-3] Result set row: 0
@@ -5161,7 +5161,7 @@ io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period
 2021-10-15 18:50:39,554 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-5] Authorized filter invocation [PUT /user/1/profile/update] with attributes [authenticated]
 2021-10-15 18:50:39,554 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-5] Secured PUT /user/1/profile/update
 2021-10-15 18:50:39,555 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] PUT "/user/1/profile/update", parameters={}
-2021-10-15 18:50:39,555 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.luongtx.oes.web.UserController#updateUserProfile(Long, ProfileDTO)
+2021-10-15 18:50:39,555 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.luongtx.oes.web.ProfileController#updateUserProfile(Long, ProfileDTO)
 2021-10-15 18:50:39,556 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-5] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 18:50:39,562 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.luongtx.oes.dto.ProfileDTO@8236b03]
 2021-10-15 18:50:39,567 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ where profile0_.USER_ID=?
@@ -8776,7 +8776,7 @@ Unconditional classes:
 2021-10-15 21:56:53,910 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-8] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 21:56:53,911 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-8] Secured GET /profile
 2021-10-15 21:56:53,911 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-8] GET "/profile", parameters={}
-2021-10-15 21:56:53,912 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 21:56:53,912 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-8] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 21:56:53,914 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-8] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 21:56:53,945 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 21:56:53,948 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-8] Result set row: 0
@@ -8872,7 +8872,7 @@ Unconditional classes:
 2021-10-15 21:57:52,474 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-9] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 21:57:52,475 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-9] Secured GET /profile
 2021-10-15 21:57:52,475 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-9] GET "/profile", parameters={}
-2021-10-15 21:57:52,475 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 21:57:52,475 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 21:57:52,476 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-9] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 21:57:52,480 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 21:57:52,483 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-9] Result set row: 0
@@ -9075,7 +9075,7 @@ Unconditional classes:
 2021-10-15 22:00:16,835 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-3] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 22:00:16,836 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-3] Secured GET /profile
 2021-10-15 22:00:16,836 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/profile", parameters={}
-2021-10-15 22:00:16,836 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 22:00:16,836 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 22:00:16,837 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-3] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:00:16,838 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 22:00:16,842 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-3] Result set row: 0
@@ -9229,7 +9229,7 @@ Unconditional classes:
 2021-10-15 22:01:13,734 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-5] Authorized filter invocation [PUT /profile/update] with attributes [authenticated]
 2021-10-15 22:01:13,735 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-5] Secured PUT /profile/update
 2021-10-15 22:01:13,736 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] PUT "/profile/update", parameters={}
-2021-10-15 22:01:13,736 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.luongtx.oes.web.UserController#updateUserProfile(String, ProfileDTO)
+2021-10-15 22:01:13,736 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to com.luongtx.oes.web.ProfileController#updateUserProfile(String, ProfileDTO)
 2021-10-15 22:01:13,737 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-5] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:01:13,740 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.luongtx.oes.dto.ProfileDTO@4f1e09b5]
 2021-10-15 22:01:13,744 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
@@ -9342,14 +9342,14 @@ Unconditional classes:
 2021-10-15 22:01:18,464 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-6] Authorized filter invocation [PUT /profile/update] with attributes [authenticated]
 2021-10-15 22:01:18,465 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-6] Secured PUT /profile/update
 2021-10-15 22:01:18,466 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] PUT "/profile/update", parameters={}
-2021-10-15 22:01:18,467 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to com.luongtx.oes.web.UserController#updateUserProfile(String, ProfileDTO)
+2021-10-15 22:01:18,467 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to com.luongtx.oes.web.ProfileController#updateUserProfile(String, ProfileDTO)
 2021-10-15 22:01:18,467 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-6] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:01:18,470 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [com.luongtx.oes.dto.ProfileDTO@3337ae52]
 2021-10-15 22:01:18,474 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [http-nio-8080-exec-6] Using @ExceptionHandler com.luongtx.oes.web.handler.ApplicationExceptionHandler#handleException(Exception, WebRequest)
 2021-10-15 22:01:18,475 DEBUG com.luongtx.oes.web.handler.ApplicationExceptionHandler [http-nio-8080-exec-6] Full name is required
 2021-10-15 22:01:18,475 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 2021-10-15 22:01:18,476 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [{fullName=Full name is required}]
-2021-10-15 22:01:18,478 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<java.lang.String> com.luongtx.oes.web.UserController.updateUserProfile(java.lang.String,com.luongtx.oes.dto.ProfileDTO): [Field error in object 'profileDTO' on field 'fullName': rejected value []; codes [NotBlank.profileDTO.fullName,NotBlank.fullName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [profileDTO.fullName,fullName]; arguments []; default message [fullName]]; default message [Full name is required]] ]
+2021-10-15 22:01:18,478 DEBUG org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<java.lang.String> com.luongtx.oes.web.ProfileController.updateUserProfile(java.lang.String,com.luongtx.oes.dto.ProfileDTO): [Field error in object 'profileDTO' on field 'fullName': rejected value []; codes [NotBlank.profileDTO.fullName,NotBlank.fullName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [profileDTO.fullName,fullName]; arguments []; default message [fullName]]; default message [Full name is required]] ]
 2021-10-15 22:01:18,479 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-6] Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:01:18,480 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 400 BAD_REQUEST
 2021-10-15 22:01:18,481 DEBUG org.springframework.security.web.context.SecurityContextPersistenceFilter [http-nio-8080-exec-6] Cleared SecurityContextHolder to complete request
@@ -9395,7 +9395,7 @@ Unconditional classes:
 2021-10-15 22:01:26,695 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-7] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 22:01:26,695 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-7] Secured GET /profile
 2021-10-15 22:01:26,696 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-7] GET "/profile", parameters={}
-2021-10-15 22:01:26,697 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 22:01:26,697 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-7] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 22:01:26,698 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-7] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:01:26,701 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 22:01:26,704 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-7] Result set row: 0
@@ -9510,7 +9510,7 @@ Unconditional classes:
 2021-10-15 22:02:29,704 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-9] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 22:02:29,704 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-9] Secured GET /profile
 2021-10-15 22:02:29,705 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-9] GET "/profile", parameters={}
-2021-10-15 22:02:29,705 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 22:02:29,705 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-9] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 22:02:29,706 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-9] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:02:29,708 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 22:02:29,711 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-9] Result set row: 0
@@ -9602,7 +9602,7 @@ Unconditional classes:
 2021-10-15 22:02:41,957 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-10] Authorized filter invocation [PUT /profile/update] with attributes [authenticated]
 2021-10-15 22:02:41,958 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-10] Secured PUT /profile/update
 2021-10-15 22:02:41,958 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] PUT "/profile/update", parameters={}
-2021-10-15 22:02:41,959 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to com.luongtx.oes.web.UserController#updateUserProfile(String, ProfileDTO)
+2021-10-15 22:02:41,959 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-10] Mapped to com.luongtx.oes.web.ProfileController#updateUserProfile(String, ProfileDTO)
 2021-10-15 22:02:41,959 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-10] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:02:41,961 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-10] Read "application/json;charset=UTF-8" to [com.luongtx.oes.dto.ProfileDTO@172df893]
 2021-10-15 22:02:41,963 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
@@ -9714,7 +9714,7 @@ Unconditional classes:
 2021-10-15 22:02:48,193 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-1] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 22:02:48,194 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-1] Secured GET /profile
 2021-10-15 22:02:48,194 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] GET "/profile", parameters={}
-2021-10-15 22:02:48,195 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 22:02:48,195 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 22:02:48,195 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-1] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:02:48,197 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 22:02:48,199 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-1] Result set row: 0
@@ -9808,7 +9808,7 @@ Unconditional classes:
 2021-10-15 22:03:07,492 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-2] Authorized filter invocation [PUT /profile/update] with attributes [authenticated]
 2021-10-15 22:03:07,493 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-2] Secured PUT /profile/update
 2021-10-15 22:03:07,493 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] PUT "/profile/update", parameters={}
-2021-10-15 22:03:07,494 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.luongtx.oes.web.UserController#updateUserProfile(String, ProfileDTO)
+2021-10-15 22:03:07,494 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-2] Mapped to com.luongtx.oes.web.ProfileController#updateUserProfile(String, ProfileDTO)
 2021-10-15 22:03:07,494 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-2] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:03:07,497 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-2] Read "application/json;charset=UTF-8" to [com.luongtx.oes.dto.ProfileDTO@27cac86f]
 2021-10-15 22:03:07,500 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
@@ -9920,7 +9920,7 @@ Unconditional classes:
 2021-10-15 22:03:14,851 DEBUG org.springframework.security.access.intercept.AbstractSecurityInterceptor [http-nio-8080-exec-3] Authorized filter invocation [GET /profile] with attributes [authenticated]
 2021-10-15 22:03:14,852 DEBUG org.springframework.security.web.FilterChainProxy$VirtualFilterChain [http-nio-8080-exec-3] Secured GET /profile
 2021-10-15 22:03:14,852 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] GET "/profile", parameters={}
-2021-10-15 22:03:14,852 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.UserController#getUserProfile(String)
+2021-10-15 22:03:14,852 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to com.luongtx.oes.web.ProfileController#getUserProfile(String)
 2021-10-15 22:03:14,853 DEBUG org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor [http-nio-8080-exec-3] Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
 2021-10-15 22:03:14,857 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] select profile0_.ID as id1_5_, profile0_.BIRTHDAY as birthday2_5_, profile0_.EMAIL as email3_5_, profile0_.FULL_NAME as full_nam4_5_, profile0_.GENDER as gender5_5_, profile0_.PHONE_NO as phone_no6_5_, profile0_.USER_ID as user_id7_5_ from PROFILE profile0_ cross join `USER` user1_ where profile0_.USER_ID=user1_.ID and user1_.USERNAME=?
 2021-10-15 22:03:14,861 DEBUG org.jboss.logging.DelegatingBasicLogger [http-nio-8080-exec-3] Result set row: 0

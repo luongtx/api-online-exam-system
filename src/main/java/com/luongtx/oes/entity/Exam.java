@@ -34,10 +34,10 @@ public class Exam {
     private String description;
 
     @Column(name = "DURATION")
-    private int duration;
+    private Integer duration;
 
     @Column(name = "PASSING_SCORE")
-    private int passingScore;
+    private Integer passingScore;
 
     @Column(name = "REG_DATE")
     private LocalDate regDate;
@@ -49,7 +49,7 @@ public class Exam {
     private String bannerImage;
 
     @Transient
-    private int numberOfQuestions;
+    private Integer numberOfQuestions;
 
     @OneToMany(mappedBy = "exam", fetch = FetchType.LAZY)
     @JsonIgnore

@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -27,6 +28,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -65,6 +68,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         }
         final UserDetails userDetails = userDetailsService.loadUserByUsername(loginDTO.getUsername());
         responseDTO.setToken(jwtTokenUtil.generateToken(userDetails));
+        List<String> roles = getUserRoles(userDetails);
+        log.info(roles.toString());
+        responseDTO.setRoles(roles);
         return responseDTO;
     }
 
@@ -109,5 +115,12 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         profile.setImageSrc(registerDTO.getImageSrc());
         profile.setUser(user);
         return profile;
+    }
+
+    List<String> getUserRoles(UserDetails userDetails) {
+        return userDetails.getAuthorities()
+                .stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.toList());
     }
 }

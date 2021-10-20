@@ -2,7 +2,6 @@ package com.luongtx.oes.web;
 
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.service.ProfileService;
-import com.luongtx.oes.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +12,7 @@ import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:4200"})
-public class UserController {
-
-    @Autowired
-    UserService userService;
+public class ProfileController {
 
     @Autowired
     ProfileService profileService;
