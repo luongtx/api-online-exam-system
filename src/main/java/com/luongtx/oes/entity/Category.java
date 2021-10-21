@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,11 +25,11 @@ public class Category {
     @Column(name = "NAME")
     private String name;
 
-    @Column(name = "MOD_DATE")
-    private LocalDate modDate;
-
-    @Column(name = "REG_DATE")
-    private LocalDate regDate;
+//    @Column(name = "MOD_DATE")
+//    private LocalDateTime modDate;
+//
+//    @Column(name = "REG_DATE")
+//    private LocalDateTime regDate;
 
     @OneToMany(mappedBy = "category")
     @JsonManagedReference

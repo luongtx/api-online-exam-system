@@ -24,6 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -47,8 +48,11 @@ public class ExamServiceImpl implements ExamService {
     @Value("${upload.path}")
     String uploadPath;
 
-    public List<Exam> findAll() {
-        return examRepo.findAll();
+    public List<ExamDTO> findAll() {
+        return examRepo.findAll()
+                .stream()
+                .map(this::examToExamDTO)
+                .collect(Collectors.toList());
     }
 
     public Exam findById(Long id) {
@@ -60,7 +64,7 @@ public class ExamServiceImpl implements ExamService {
         Exam exam = findById(id);
         int numberOfQuestions = findNumberOfQuestions(id);
         exam.setNumberOfQuestions(numberOfQuestions);
-        return convertEntityToDTO(exam);
+        return examToExamDTO(exam);
     }
 
     @Override
@@ -88,7 +92,7 @@ public class ExamServiceImpl implements ExamService {
     public List<ExamResultDTO> getRecentUserExams(String userToken) {
         List<ExamResultDTO> examResultDTOS = new ArrayList<>();
         User user = getUserFromToken(userToken);
-        List<UserExam> userExams = userExamRepo.getAllByUserIdOrderByRegDateDesc(user.getId());
+        List<UserExam> userExams = userExamRepo.getAllByUserIdOrderByFinishedDateDesc(user.getId());
         log.info(userExams.toString());
         for (UserExam userExam : userExams) {
             ExamResultDTO dto = new ExamResultDTO();
@@ -99,7 +103,7 @@ public class ExamServiceImpl implements ExamService {
             dto.setStatus(userExam.getStatus());
             dto.setScore(userExam.getScore());
             dto.setPassingScore(exam.getPassingScore());
-            dto.setFinishedAt(userExam.getRegDate());
+            dto.setFinishedAt(userExam.getFinishedDate());
             log.info(dto.toString());
             examResultDTOS.add(dto);
         }
@@ -108,16 +112,16 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public void save(ExamDTO examDTO) {
-        Exam exam = convertDTOToEntity(examDTO);
+        Exam exam = examDTOToExam(examDTO);
         examRepo.save(exam);
     }
 
     @Override
     public void save(ExamDTO examDTO, MultipartFile file) {
-        Exam exam = convertDTOToEntity(examDTO);
-        String imageSource = FileUtils.uploadFile(file, uploadPath);
-        if (imageSource != null) {
-            exam.setBannerImage(imageSource);
+        Exam exam = examDTOToExam(examDTO);
+        String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+        if (uploadedFilePath != null) {
+            exam.setBannerImage(uploadedFilePath);
         }
         examRepo.save(exam);
     }
@@ -147,6 +151,18 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
+    public void saveQuestion(Question question, Long examId) {
+        question.setExam(findById(examId));
+        log.info(question.toString());
+        questionRepo.save(question);
+    }
+
+    @Override
+    public void deleteQuestion(Long questionId) {
+        questionRepo.deleteById(questionId);
+    }
+
+    @Override
     public List<Question> findQuestionsByExamId(Long id) {
         return examRepo.findById(id).orElse(new Exam()).getQuestions();
     }
@@ -158,7 +174,12 @@ public class ExamServiceImpl implements ExamService {
     public void updateUserExamResult(String userToken, Long examId, ExamResultDTO resultDTO) {
         User user = getUserFromToken(userToken);
         log.info(user.toString());
-        UserExam userExam = new UserExam(user.getId(), examId, resultDTO.getScore(), resultDTO.getStatus());
+        UserExam userExam = new UserExam();
+        userExam.setUserId(user.getId());
+        userExam.setExamId(examId);
+        userExam.setScore(resultDTO.getScore());
+        userExam.setStatus(resultDTO.getStatus());
+        userExam.setFinishedDate(LocalDateTime.now());
         userExamRepo.save(userExam);
     }
 
@@ -167,7 +188,7 @@ public class ExamServiceImpl implements ExamService {
         return userRepo.findUserByUsername(username);
     }
 
-    Exam convertDTOToEntity(ExamDTO dto) {
+    Exam examDTOToExam(ExamDTO dto) {
         Exam exam = new Exam();
         if (dto.getId() != null) {
             exam = examRepo.getById(dto.getId());
@@ -181,7 +202,7 @@ public class ExamServiceImpl implements ExamService {
         return exam;
     }
 
-    ExamDTO convertEntityToDTO(Exam exam) {
+    ExamDTO examToExamDTO(Exam exam) {
         ExamDTO examDTO = new ExamDTO();
         examDTO.setId(exam.getId());
         examDTO.setExamCode(exam.getExamCode());

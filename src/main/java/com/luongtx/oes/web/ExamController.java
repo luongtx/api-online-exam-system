@@ -3,7 +3,6 @@ package com.luongtx.oes.web;
 import com.luongtx.oes.constants.RoleConstants;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
-import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.service.ExamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,8 @@ public class ExamController {
     ExamService examService;
 
     @GetMapping(path = "")
-    public ResponseEntity<List<Exam>> getAllExams() {
-        List<Exam> exams = examService.findAll();
+    public ResponseEntity<List<ExamDTO>> getAllExams() {
+        List<ExamDTO> exams = examService.findAll();
         return new ResponseEntity<>(exams, HttpStatus.OK);
     }
 
@@ -50,7 +49,7 @@ public class ExamController {
         return new ResponseEntity<>(examResultDTO, HttpStatus.OK);
     }
 
-    @GetMapping(path = "recent")
+    @GetMapping(path = "/recent")
     public ResponseEntity<List<ExamResultDTO>> getRecentUserExams(@RequestHeader("Authorization") String userToken) {
         List<ExamResultDTO> examResultDTOS = examService.getRecentUserExams(userToken);
         return new ResponseEntity<>(examResultDTOS, HttpStatus.OK);
@@ -75,9 +74,21 @@ public class ExamController {
         examService.delete(id);
     }
 
-    @PostMapping(value = "{id}/questions/save")
+    @PostMapping(value = "/{id}/questions/save")
     @Secured(RoleConstants.ROLE_ADMIN)
     public void saveQuestions(@RequestBody List<Question> questions, @PathVariable("id") Long examId) {
         examService.saveQuestions(questions, examId);
+    }
+
+    @PostMapping(value = "/{id}/question/save")
+    @Secured(RoleConstants.ROLE_ADMIN)
+    public void saveQuestion(@RequestBody Question question, @PathVariable("id") Long examId) {
+        examService.saveQuestion(question, examId);
+    }
+
+    @DeleteMapping(value = "/question/{id}/delete")
+    @Secured(RoleConstants.ROLE_ADMIN)
+    public void deleteQuestion(@PathVariable("id") Long questionId) {
+        examService.deleteQuestion(questionId);
     }
 }
