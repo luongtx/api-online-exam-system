@@ -2,7 +2,6 @@ package com.luongtx.oes.service;
 
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
-import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,7 +9,7 @@ import java.util.List;
 
 public interface ExamService {
 
-    List<Exam> findAll();
+    List<ExamDTO> findAll();
 
     List<Question> findQuestionsByExamId(Long id);
 
@@ -29,4 +28,8 @@ public interface ExamService {
     void delete(Long id);
 
     void saveQuestions(List<Question> questions, Long examId);
+
+    void saveQuestion(Question question, Long examId);
+
+    void deleteQuestion(Long questionId);
 }

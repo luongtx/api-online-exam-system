@@ -7,18 +7,13 @@ import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
+import com.luongtx.oes.service.utils.FileUtils;
 import com.luongtx.oes.service.utils.ImageUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 
 @Service
 @Slf4j
@@ -61,17 +56,12 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public void uploadProfileImage(String userToken, MultipartFile file) {
-        try {
-            Profile profile = retrieveProfileFromToken(userToken);
-            String fileName = "avatar" + profile.getId() + ".jpg";
-            Path targetPath = Paths.get(this.uploadPath + fileName);
-            Files.copy(file.getInputStream(), targetPath, StandardCopyOption.REPLACE_EXISTING);
-            profile.setImageSrc(targetPath.toString());
-            profileRepo.save(profile);
-        } catch (IOException e) {
-            log.error(e.getMessage());
-            throw new ApplicationUserException(e.getMessage());
+        Profile profile = retrieveProfileFromToken(userToken);
+        String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+        if (uploadedFilePath != null) {
+            profile.setImageSrc(uploadedFilePath);
         }
+        profileRepo.save(profile);
     }
 
     ProfileDTO convertToProfileDTO(Profile profile) {

@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,14 +28,14 @@ public class Question {
     @Lob
     private String content;
 
-    @Column(name = "IS_MULTI_OPTIONS")
-    private boolean isMultipleOptions;
+//    @Column(name = "IS_MULTI_OPTIONS")
+//    private boolean isMultipleOptions;
 
-    @Column(name = "MOD_DATE")
-    private LocalDate modDate;
-
-    @Column(name = "REG_DATE")
-    private LocalDate regDate;
+//    @Column(name = "MOD_DATE")
+//    private LocalDateTime modDate;
+//
+//    @Column(name = "REG_DATE")
+//    private LocalDateTime regDate;
 
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
@@ -55,5 +54,15 @@ public class Question {
         return answers.stream()
                 .filter(Answer::isCorrect).map(Answer::getId)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", answers=" + answers +
+                ", examId=" + exam.getId() +
+                '}';
     }
 }

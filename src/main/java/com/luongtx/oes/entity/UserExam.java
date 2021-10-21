@@ -27,8 +27,8 @@ public class UserExam {
     @Column(name = "EXAM_ID")
     private Long examId;
 
-    @Column(name = "REG_DATE")
-    private LocalDateTime regDate;
+    @Column(name = "FINISHED_DATE")
+    private LocalDateTime finishedDate;
 
     @NonNull
     @Column(name = "EXAM_SCORE")

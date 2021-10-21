@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface UserExamRepo extends JpaRepository<UserExam, Long> {
-    List<UserExam> getAllByUserIdOrderByRegDateDesc(Long userId);
+    List<UserExam> getAllByUserIdOrderByFinishedDateDesc(Long userId);
 }

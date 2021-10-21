@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -25,9 +24,6 @@ public class Answer {
     @Lob
     private String content;
 
-    @Column(name = "MOD_DATE")
-    private LocalDate modDate;
-
     @Column(name = "IS_CORRECT")
     private boolean isCorrect;
 
@@ -35,4 +31,13 @@ public class Answer {
     @JoinColumn(name = "QUESTION_ID")
     @JsonBackReference
     private Question question;
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", isCorrect=" + isCorrect +
+                '}';
+    }
 }
