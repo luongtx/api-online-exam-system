@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,22 +33,22 @@ public class Exam {
     private String description;
 
     @Column(name = "DURATION")
-    private int duration;
+    private Integer duration;
 
     @Column(name = "PASSING_SCORE")
-    private int passingScore;
+    private Integer passingScore;
 
-    @Column(name = "REG_DATE")
-    private LocalDate regDate;
-
-    @Column(name = "MOD_DATE")
-    private LocalDate modDate;
+//    @Column(name = "REG_DATE")
+//    private LocalDateTime regDate;
+//
+//    @Column(name = "MOD_DATE")
+//    private LocalDateTime modDate;
 
     @Column(name = "BANNER_IMAGE")
     private String bannerImage;
 
     @Transient
-    private int numberOfQuestions;
+    private Integer numberOfQuestions;
 
     @OneToMany(mappedBy = "exam", fetch = FetchType.LAZY)
     @JsonIgnore

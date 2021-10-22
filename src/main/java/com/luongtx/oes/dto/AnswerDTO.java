@@ -3,13 +3,14 @@ package com.luongtx.oes.dto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.List;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
-public class LoginResponseDTO {
-    private String token;
-    private List<String> roles;
+public class AnswerDTO {
+    private Long id;
+    private String content;
+    private Boolean isCorrect;
 }

@@ -7,9 +7,13 @@ import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
+import com.luongtx.oes.service.utils.FileUtils;
+import com.luongtx.oes.service.utils.ImageUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 @Service
 @Slf4j
@@ -22,7 +26,11 @@ public class ProfileServiceImpl implements ProfileService {
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
+    @Value("${upload.path}")
+    String uploadPath;
+
     @Override
+
     public ProfileDTO getCurrentUserProfile(String userToken) {
         Profile profile = retrieveProfileFromToken(userToken);
         log.info(profile.toString());
@@ -46,6 +54,16 @@ public class ProfileServiceImpl implements ProfileService {
         }
     }
 
+    @Override
+    public void uploadProfileImage(String userToken, MultipartFile file) {
+        Profile profile = retrieveProfileFromToken(userToken);
+        String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+        if (uploadedFilePath != null) {
+            profile.setImageSrc(uploadedFilePath);
+        }
+        profileRepo.save(profile);
+    }
+
     ProfileDTO convertToProfileDTO(Profile profile) {
         ProfileDTO profileDTO = new ProfileDTO();
         profileDTO.setEmail(profile.getEmail());
@@ -53,6 +71,8 @@ public class ProfileServiceImpl implements ProfileService {
         profileDTO.setGender(profile.getGender());
         profileDTO.setPhoneNo(profile.getPhoneNo());
         profileDTO.setBirthDay(profile.getBirthDay());
+        String base64Image = ImageUtils.encodeToBased64(profile.getImageSrc());
+        profileDTO.setImageSrc(base64Image);
         return profileDTO;
     }
 

@@ -7,11 +7,7 @@ public interface BaseService<T> {
 
     T findById(Long id);
 
-    T getById(Long id);
-
     void add(T t);
-
-    T deleteById(Long id);
 
     void update(T t);
 }
