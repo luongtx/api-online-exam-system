@@ -15,9 +15,6 @@ public class ImageUtils {
     public static String encodeToBased64(String path) {
         String binary = null;
         try {
-//            if (path == null) {
-//                path = AppConstants.DEFAULT_PROFILE_IMAGE_PATH;
-//            }
             BufferedImage bufferedImage = ImageIO.read(new File(path));
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ImageIO.write(bufferedImage, getFileExtension(path), bos);

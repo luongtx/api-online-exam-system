@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -101,13 +102,14 @@ public class ExamServiceImpl implements ExamService {
     public List<ExamResultDTO> getRecentUserExams(String userToken) {
         List<ExamResultDTO> examResultDTOS = new ArrayList<>();
         User user = getUserFromToken(userToken);
-        List<UserExam> userExams = userExamRepo.getAllByUserIdOrderByFinishedDateDesc(user.getId());
-        log.info(userExams.toString());
+        Pageable pageable = PageRequest.of(0, 5);
+        List<UserExam> userExams = userExamRepo.getMostRecentByUserId(user.getId(), pageable);
+//        log.info(userExams.toString());
         for (UserExam userExam : userExams) {
             ExamResultDTO dto = convertToExamResultDTO(userExam);
             examResultDTOS.add(dto);
         }
-        return examResultDTOS.subList(0, 5);
+        return examResultDTOS;
     }
 
     @Override
@@ -234,7 +236,7 @@ public class ExamServiceImpl implements ExamService {
         dto.setFinishedAt(userExam.getFinishedDate());
         String based64ImageSrc = resolveBannerImage(exam.getBannerImage());
         dto.setBannerImage(based64ImageSrc);
-        log.info(dto.toString());
+//        log.info(dto.toString());
         return dto;
     }
 
