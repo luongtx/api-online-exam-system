@@ -1,11 +1,15 @@
 package com.luongtx.oes.web;
 
+import com.luongtx.oes.constants.PageConstants;
 import com.luongtx.oes.constants.RoleConstants;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
 import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.service.ExamService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -13,7 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/exams")
@@ -24,9 +30,22 @@ public class ExamController {
     ExamService examService;
 
     @GetMapping(path = "")
-    public ResponseEntity<List<ExamDTO>> getAllExams() {
-        List<ExamDTO> exams = examService.findAll();
-        return new ResponseEntity<>(exams, HttpStatus.OK);
+    public ResponseEntity<Map<String, Object>> getAllExams(
+            @RequestParam(name = "page", required = false) Integer page,
+            @RequestParam(name = "size", required = false) Integer size
+    ) {
+        Map<String, Object> response = new HashMap<>();
+        if (page == null || size == null) {
+            List<ExamDTO> examDTOS = examService.findAll();
+            response.put(PageConstants.DATA, examDTOS);
+        } else {
+            Pageable pageable = PageRequest.of(page, size);
+            Page<ExamDTO> pageExamDTOs = examService.findAll(pageable);
+            response.put(PageConstants.DATA, pageExamDTOs.getContent());
+//            response.put(PageConstants.TOTAL_ITEM, pageExamDTOs.getTotalElements());
+            response.put(PageConstants.TOTAL_PAGE, pageExamDTOs.getTotalPages());
+        }
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @GetMapping(path = "/{id}")
@@ -36,9 +55,23 @@ public class ExamController {
     }
 
     @GetMapping(path = {"/{id}/questions", "/{id}/start"})
-    public ResponseEntity<List<Question>> getQuestionsByExamId(@PathVariable(name = "id") Long id) {
-        List<Question> questions = examService.findQuestionsByExamId(id);
-        return new ResponseEntity<>(questions, HttpStatus.OK);
+    public ResponseEntity<Map<String, Object>> getQuestionsByExamId(
+            @PathVariable(name = "id") Long examId,
+            @RequestParam(value = "page", required = false) Integer page,
+            @RequestParam(value = "size", required = false) Integer size
+    ) {
+        Map<String, Object> response = new HashMap<>();
+        if (page == null || size == null) {
+            List<Question> questions = examService.findAllQuestions(examId);
+            response.put(PageConstants.DATA, questions);
+        } else {
+            Pageable pageable = PageRequest.of(page, size);
+            Page<Question> pageQuestions = examService.findAllQuestions(examId, pageable);
+            response.put(PageConstants.DATA, pageQuestions.getContent());
+//            response.put(PageConstants.TOTAL_ITEM, pageQuestions.getTotalElements());
+            response.put(PageConstants.TOTAL_PAGE, pageQuestions.getTotalPages());
+        }
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping(path = "/{id}/submit")
