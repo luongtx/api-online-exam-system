@@ -1,5 +1,6 @@
 package com.luongtx.oes.service.impl;
 
+import com.luongtx.oes.constants.AppConstants;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
 import com.luongtx.oes.entity.Exam;
@@ -18,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -53,14 +55,14 @@ public class ExamServiceImpl implements ExamService {
     public List<ExamDTO> findAll() {
         return examRepo.findAll()
                 .stream()
-                .map(this::examToExamDTO)
+                .map(this::convertToExamDTO)
                 .collect(Collectors.toList());
     }
 
     @Override
     public Page<ExamDTO> findAll(Pageable pageable) {
         Page<Exam> pageExams = examRepo.findAll(pageable);
-        return pageExams.map(this::examToExamDTO);
+        return pageExams.map(this::convertToExamDTO);
     }
 
     public Exam findById(Long id) {
@@ -72,7 +74,7 @@ public class ExamServiceImpl implements ExamService {
         Exam exam = findById(id);
         int numberOfQuestions = findNumberOfQuestions(id);
         exam.setNumberOfQuestions(numberOfQuestions);
-        return examToExamDTO(exam);
+        return convertToExamDTO(exam);
     }
 
     @Override
@@ -100,33 +102,25 @@ public class ExamServiceImpl implements ExamService {
     public List<ExamResultDTO> getRecentUserExams(String userToken) {
         List<ExamResultDTO> examResultDTOS = new ArrayList<>();
         User user = getUserFromToken(userToken);
-        List<UserExam> userExams = userExamRepo.getAllByUserIdOrderByFinishedDateDesc(user.getId());
-        log.info(userExams.toString());
+        Pageable pageable = PageRequest.of(0, 5);
+        List<UserExam> userExams = userExamRepo.getMostRecentByUserId(user.getId(), pageable);
+//        log.info(userExams.toString());
         for (UserExam userExam : userExams) {
-            ExamResultDTO dto = new ExamResultDTO();
-            Exam exam = examRepo.getById(userExam.getExamId());
-            dto.setExamId(userExam.getExamId());
-            dto.setTitle(exam.getTitle());
-            dto.setDescription(exam.getDescription());
-            dto.setStatus(userExam.getStatus());
-            dto.setScore(userExam.getScore());
-            dto.setPassingScore(exam.getPassingScore());
-            dto.setFinishedAt(userExam.getFinishedDate());
-            log.info(dto.toString());
+            ExamResultDTO dto = convertToExamResultDTO(userExam);
             examResultDTOS.add(dto);
         }
-        return examResultDTOS.subList(0, 5);
+        return examResultDTOS;
     }
 
     @Override
     public void save(ExamDTO examDTO) {
-        Exam exam = examDTOToExam(examDTO);
+        Exam exam = convertToExam(examDTO);
         examRepo.save(exam);
     }
 
     @Override
     public void save(ExamDTO examDTO, MultipartFile file) {
-        Exam exam = examDTOToExam(examDTO);
+        Exam exam = convertToExam(examDTO);
         String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
         if (uploadedFilePath != null) {
             exam.setBannerImage(uploadedFilePath);
@@ -201,7 +195,7 @@ public class ExamServiceImpl implements ExamService {
         return userRepo.findUserByUsername(username);
     }
 
-    Exam examDTOToExam(ExamDTO dto) {
+    Exam convertToExam(ExamDTO dto) {
         Exam exam = new Exam();
         if (dto.getId() != null) {
             exam = examRepo.getById(dto.getId());
@@ -215,7 +209,7 @@ public class ExamServiceImpl implements ExamService {
         return exam;
     }
 
-    ExamDTO examToExamDTO(Exam exam) {
+    ExamDTO convertToExamDTO(Exam exam) {
         ExamDTO examDTO = new ExamDTO();
         examDTO.setId(exam.getId());
         examDTO.setExamCode(exam.getExamCode());
@@ -225,9 +219,31 @@ public class ExamServiceImpl implements ExamService {
         examDTO.setDuration(exam.getDuration());
 //        examDTO.setQuestions(exam.getQuestions());
         examDTO.setNumberOfQuestions(exam.getNumberOfQuestions());
-        String bannerImageSource = ImageUtils.encodeToBased64(exam.getBannerImage());
-        examDTO.setBannerImageSource(bannerImageSource);
+        String based64ImageSrc = resolveBannerImage(exam.getBannerImage());
+        examDTO.setBannerImageSource(based64ImageSrc);
         return examDTO;
     }
 
+    ExamResultDTO convertToExamResultDTO(UserExam userExam) {
+        ExamResultDTO dto = new ExamResultDTO();
+        Exam exam = examRepo.getById(userExam.getExamId());
+        dto.setExamId(userExam.getExamId());
+        dto.setTitle(exam.getTitle());
+        dto.setDescription(exam.getDescription());
+        dto.setStatus(userExam.getStatus());
+        dto.setScore(userExam.getScore());
+        dto.setPassingScore(exam.getPassingScore());
+        dto.setFinishedAt(userExam.getFinishedDate());
+        String based64ImageSrc = resolveBannerImage(exam.getBannerImage());
+        dto.setBannerImage(based64ImageSrc);
+//        log.info(dto.toString());
+        return dto;
+    }
+
+    String resolveBannerImage(String imageSrc) {
+        if (imageSrc == null) {
+            imageSrc = AppConstants.DEFAULT_EXAM_BANNER_PATH;
+        }
+        return ImageUtils.encodeToBased64(imageSrc);
+    }
 }

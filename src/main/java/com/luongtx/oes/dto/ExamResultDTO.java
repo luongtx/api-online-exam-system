@@ -17,4 +17,5 @@ public class ExamResultDTO {
     private Integer passingScore;
     private Boolean status;
     private LocalDateTime finishedAt;
+    private String bannerImage;
 }
