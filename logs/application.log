@@ -1,0 +1,1077 @@
+2021-10-22 09:48:08,693 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 899324 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 09:48:08,695 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 09:48:08,697 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 09:48:19,523 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtRequestFilter' configured for use
+2021-10-22 09:48:21,755 INFO org.springframework.boot.StartupInfoLogger [main] Started OnlineExaminationSystemApplication in 14.525 seconds (JVM running for 16.398)
+2021-10-22 09:52:14,651 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2021-10-22 09:52:24,650 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2021-10-22 09:52:25,311 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-2] [ROLE_USER]
+2021-10-22 09:52:45,332 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] user
+2021-10-22 09:52:45,333 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 09:54:55,770 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 09:54:55,770 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 09:56:09,973 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 09:56:09,974 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 09:58:35,983 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 09:58:35,985 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 09:59:14,697 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 09:59:14,699 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 11:32:07,317 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 929109 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 11:32:07,319 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 11:32:07,320 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 11:32:13,251 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtRequestFilter' configured for use
+2021-10-22 11:32:14,739 INFO org.springframework.boot.StartupInfoLogger [main] Started OnlineExaminationSystemApplication in 9.244 seconds (JVM running for 11.774)
+2021-10-22 11:33:12,874 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 11:33:12,875 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 11:41:59,582 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token has expired
+2021-10-22 11:41:59,582 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token has expired
+2021-10-22 11:41:59,700 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token has expired
+2021-10-22 11:41:59,888 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-6] Can't create cache file!
+2021-10-22 11:41:59,897 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-6] Can't create cache file!
+2021-10-22 11:41:59,901 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-6] Can't create cache file!
+2021-10-22 11:41:59,919 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2021-10-22 11:41:59,949 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-9] Can't create cache file!
+2021-10-22 11:41:59,952 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-9] Can't create cache file!
+2021-10-22 11:41:59,954 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-9] Can't create cache file!
+2021-10-22 11:42:16,174 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2021-10-22 11:42:16,585 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-1] [ROLE_ADMIN]
+2021-10-22 11:42:16,598 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 11:42:16,599 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 11:42:16,610 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 11:42:16,614 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 11:42:16,657 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 11:42:16,659 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 11:42:16,660 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 11:42:16,668 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@7e31a485)
+2021-10-22 11:42:16,672 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-2] Can't create cache file!
+2021-10-22 11:42:43,918 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 11:42:43,919 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 11:42:43,922 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 11:42:43,922 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 11:42:43,967 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-3] Can't create cache file!
+2021-10-22 11:47:14,249 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2021-10-22 11:47:14,678 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2021-10-22 11:47:14,707 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 11:47:14,709 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 11:47:14,710 ERROR com.luongtx.oes.service.utils.ImageUtils [http-nio-8080-exec-5] Can't create cache file!
+2021-10-22 12:33:50,528 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 28164 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 12:33:50,530 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 12:33:50,532 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 12:37:13,908 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 29144 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 12:37:13,916 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 12:37:13,917 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 12:37:19,464 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtRequestFilter' configured for use
+2021-10-22 12:37:20,899 INFO org.springframework.boot.StartupInfoLogger [main] Started OnlineExaminationSystemApplication in 7.81 seconds (JVM running for 10.947)
+2021-10-22 12:40:11,955 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token has expired
+2021-10-22 12:40:11,955 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token has expired
+2021-10-22 12:40:12,101 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token has expired
+2021-10-22 12:40:21,997 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2021-10-22 12:40:39,100 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2021-10-22 12:40:39,501 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-8] [ROLE_ADMIN]
+2021-10-22 12:40:39,516 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 12:40:39,517 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 12:40:39,532 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 12:40:39,534 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 12:40:39,586 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@8fdaac)
+2021-10-22 12:41:10,633 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 12:41:10,634 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 12:41:10,642 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 12:41:10,644 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 12:41:19,705 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 12:41:19,706 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 12:41:20,804 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 12:41:20,805 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 12:41:20,825 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@7b0af04f)
+2021-10-22 12:41:20,827 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 12:41:20,828 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 12:41:20,839 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 12:41:20,840 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 12:41:20,861 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@5d3843b3)
+2021-10-22 12:41:28,189 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 12:41:28,191 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 12:41:28,200 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 12:41:28,202 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 12:46:27,386 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 12:46:27,387 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 12:46:27,391 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 12:46:27,392 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 12:46:27,809 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 12:46:27,810 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 12:46:27,855 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4680c42a)
+2021-10-22 12:46:27,890 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 12:46:27,891 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 12:46:41,222 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 12:46:41,226 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 12:46:41,229 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 12:46:41,230 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 12:57:50,018 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 12:57:50,021 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 12:57:50,033 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 12:57:50,035 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 12:57:50,381 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 12:57:50,382 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 12:57:50,458 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@2a39c59)
+2021-10-22 12:57:50,580 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 12:57:50,581 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 12:57:57,504 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 12:57:57,505 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 12:57:57,510 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 12:57:57,511 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 12:58:04,196 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 12:58:04,197 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 12:58:09,267 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 12:58:09,268 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 12:58:32,021 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 12:58:32,024 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 12:58:34,754 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 12:58:34,755 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 12:58:38,003 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 12:58:38,005 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 12:58:40,107 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 12:58:40,108 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:03:57,342 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:03:57,342 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:03:59,628 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:03:59,629 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:04:02,422 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:04:02,422 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:04:05,965 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:04:05,966 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:04:08,348 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:04:08,349 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:04:09,156 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:04:09,157 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:05:20,424 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:05:20,425 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:05:30,409 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:05:30,410 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:05:34,000 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:05:34,000 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:06:29,301 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:06:29,302 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:06:29,348 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-2] Question{id=null, content='Have your girl friend got married?', answers=[Answer{id=null, content='yes', isCorrect=false}, Answer{id=null, content='i don't care', isCorrect=true}, Answer{id=null, content='no', isCorrect=false}], examId=1}
+2021-10-22 13:06:29,493 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:06:29,493 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:06:33,690 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:06:33,691 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:06:51,827 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:06:51,828 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:13:24,381 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:13:24,382 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:13:24,397 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:13:24,399 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:13:24,794 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:13:24,795 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:13:24,822 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@175a57da)
+2021-10-22 13:13:24,855 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:13:24,856 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:13:39,283 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:13:39,284 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:13:39,287 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:13:39,288 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:13:44,405 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:13:44,406 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:13:47,528 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:13:47,530 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:13:48,816 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:13:48,817 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:13:49,393 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:13:49,394 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:14:27,843 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:14:27,850 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:14:27,871 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-8] Question{id=null, content='Have your father dead?', answers=[Answer{id=null, content='Yes', isCorrect=false}, Answer{id=null, content='No', isCorrect=false}], examId=1}
+2021-10-22 13:14:27,892 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:14:27,893 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:14:30,518 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:14:30,519 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:14:32,143 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:14:32,144 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:14:34,966 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:14:34,967 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:14:47,167 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:14:47,169 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:14:49,742 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:14:49,743 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:15:17,999 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:15:18,000 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:16:38,565 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:16:38,567 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:16:38,572 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:16:38,573 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:16:38,905 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:16:38,907 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:16:38,946 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:16:38,948 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:16:38,952 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@5cbdd57d)
+2021-10-22 13:16:54,026 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:16:54,030 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:16:54,031 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:16:54,031 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:16:57,133 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:16:57,134 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:17:00,557 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:17:00,558 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:17:03,164 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:17:03,164 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:18:36,348 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:18:36,349 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:18:36,362 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-8] Question{id=null, content='What did you have for your last Thursday breakfast', answers=[Answer{id=null, content='dog food', isCorrect=true}, Answer{id=null, content='potato', isCorrect=false}, Answer{id=null, content='pancake', isCorrect=false}], examId=1}
+2021-10-22 13:18:36,387 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:18:36,388 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:18:42,586 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:18:42,587 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:18:44,089 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:18:44,090 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:19:37,239 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:19:37,240 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:19:37,259 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] Question{id=null, content='What will you have for dinner tonight', answers=[Answer{id=null, content='girls', isCorrect=false}, Answer{id=null, content='tits', isCorrect=false}], examId=1}
+2021-10-22 13:19:37,303 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:19:37,304 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:20:21,105 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:20:21,106 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:20:21,126 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-6] Question{id=null, content='What did you do with your duck baby', answers=[Answer{id=null, content='eat', isCorrect=false}, Answer{id=null, content='slaught', isCorrect=false}], examId=1}
+2021-10-22 13:20:21,164 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:20:21,165 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:20:24,276 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:20:24,276 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:20:27,609 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:20:27,610 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:20:28,328 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:20:28,329 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:20:29,505 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:20:29,506 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:20:30,657 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:20:30,660 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:20:31,929 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:20:31,930 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:20:32,698 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:20:32,698 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:20:33,824 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:20:33,825 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:23:09,121 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:23:09,122 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:23:09,153 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:23:09,154 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:23:09,474 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:23:09,475 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:23:09,537 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:23:09,538 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:23:09,528 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4ca71c1e)
+2021-10-22 13:23:17,353 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:23:17,354 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:23:17,358 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:23:17,360 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:24:40,042 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:24:40,043 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:24:40,055 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:24:40,059 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:24:40,366 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:24:40,368 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:24:40,387 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:24:40,390 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:24:40,432 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@28b84341)
+2021-10-22 13:24:42,473 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:24:42,474 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:24:42,475 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:24:42,476 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:24:46,978 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:24:46,979 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:24:48,193 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:24:48,194 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:24:50,306 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:24:50,306 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:24:51,369 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:24:51,370 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:25:00,338 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:25:00,339 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:25:01,025 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:25:01,026 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:25:03,370 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:25:03,371 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:25:04,042 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:25:04,042 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:28:21,126 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:28:21,127 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:28:21,816 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:28:21,817 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:28:22,668 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:28:22,669 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:28:23,304 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:28:23,305 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:28:24,690 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:28:24,691 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:28:25,906 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:28:25,907 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:28:26,430 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:28:26,431 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:29:09,261 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:29:09,262 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:31:09,528 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:31:09,529 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:31:10,337 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:31:10,338 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:31:10,951 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:31:10,952 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:31:11,624 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:31:11,625 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:31:12,564 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:31:12,565 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:31:13,610 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:31:13,611 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:31:14,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:31:14,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:31:15,780 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:31:15,781 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:31:17,703 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:31:17,704 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:31:18,688 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:31:18,688 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:31:20,759 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:31:20,759 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:31:21,726 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:31:21,727 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:31:34,288 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:31:34,289 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:31:47,808 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:31:47,809 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:32:10,800 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:32:10,800 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:34:30,596 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:34:30,597 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:34:31,388 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:34:31,388 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:34:33,170 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:34:33,171 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:34:49,564 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:34:49,566 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:34:51,522 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:34:51,523 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:36:47,576 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:36:47,577 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:36:47,587 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:36:47,588 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:36:47,974 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:36:47,978 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:36:47,991 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@ae6e1bd)
+2021-10-22 13:36:48,047 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:36:48,047 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:36:51,293 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:36:51,293 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:36:51,295 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:36:51,297 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:36:56,303 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:36:56,303 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:36:58,470 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:36:58,470 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:37:56,182 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:37:56,183 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:37:56,190 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:37:56,198 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:37:56,554 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:37:56,555 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:37:56,573 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-1] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@2b2a0547)
+2021-10-22 13:37:56,611 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:37:56,611 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:37:59,085 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:37:59,087 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:37:59,088 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:37:59,088 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:38:01,751 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:38:01,752 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:38:03,638 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:38:03,639 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:38:11,311 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:38:11,312 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:38:21,375 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:38:21,376 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:43:19,749 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:43:19,751 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:43:19,757 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:43:19,758 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:43:20,112 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:43:20,112 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:43:20,129 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@28ff4222)
+2021-10-22 13:43:20,153 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:43:20,157 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:43:21,582 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:43:21,584 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:43:21,585 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:43:21,585 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:43:24,911 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:43:24,912 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:43:26,374 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:43:26,374 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:43:33,751 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:43:33,752 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:43:34,442 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:43:34,442 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:43:50,238 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:43:50,239 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:43:52,513 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 13:43:52,514 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 13:43:52,521 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:43:52,522 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:44:05,344 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:44:05,345 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:44:08,497 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:44:08,498 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:44:08,502 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:44:08,503 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:56:57,613 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 13:56:57,616 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 13:56:57,635 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:56:57,637 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:56:57,921 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:56:57,921 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:56:57,933 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4dfe85e2)
+2021-10-22 13:56:58,012 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:56:58,012 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:57:00,990 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 13:57:00,990 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:57:00,991 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 13:57:00,991 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 13:57:08,746 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 13:57:08,747 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 13:57:12,803 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 13:57:12,804 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 13:57:16,952 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 13:57:16,953 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 13:59:41,881 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 13:59:41,882 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 13:59:42,969 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 13:59:42,970 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 13:59:51,968 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 13:59:51,970 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 13:59:53,977 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 13:59:53,978 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:00:23,914 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:00:23,915 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:00:26,167 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:00:26,167 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:00:43,888 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:00:43,889 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:01:10,725 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:01:10,725 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:01:10,734 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:01:10,734 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:01:11,098 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:01:11,098 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:01:11,108 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@1c67b853)
+2021-10-22 14:01:11,124 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:01:11,125 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:01:13,443 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:01:13,445 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:01:13,446 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:01:13,448 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:02:12,575 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:02:12,576 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:03:09,272 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:03:09,273 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:06:03,274 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:06:03,274 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:08:55,322 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:08:55,323 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:08:55,330 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:08:55,331 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:08:55,689 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:08:55,690 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:08:55,706 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-5] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@3c2cff3b)
+2021-10-22 14:08:55,728 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:08:55,729 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:09:01,382 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:09:01,383 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:09:01,384 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:09:01,385 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:09:13,707 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:09:13,707 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:09:20,472 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:09:20,473 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:09:35,308 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:09:35,308 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:09:41,097 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:09:41,097 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:09:45,738 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:09:45,738 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:09:47,125 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:09:47,125 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:09:54,602 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:09:54,603 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:09:56,102 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:09:56,103 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:09:57,631 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:09:57,632 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:12:04,676 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:12:04,676 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:12:25,864 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:12:25,872 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:12:27,148 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:12:27,149 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:12:27,153 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:12:27,154 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:12:29,842 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:12:29,843 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:12:31,345 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:12:31,346 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:12:32,799 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:12:32,799 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:12:50,340 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:12:50,342 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:12:54,312 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:12:54,313 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:12:55,759 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:12:55,760 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:12:56,926 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:12:56,927 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:13:19,283 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:13:19,284 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:14:11,598 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:14:11,599 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:15:41,455 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:15:41,456 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:15:46,591 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:15:46,594 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:15:48,105 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:15:48,105 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:15:51,010 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:15:51,010 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:15:59,173 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:15:59,174 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:16:18,503 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:16:18,504 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:22:13,684 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:22:13,684 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:22:13,703 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:22:13,703 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:22:14,029 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:22:14,029 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:22:14,042 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@44eda7ca)
+2021-10-22 14:22:14,078 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:22:14,079 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:22:16,021 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:22:16,023 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:22:16,024 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:22:16,026 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:22:24,958 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:22:24,960 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:22:38,460 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:22:38,461 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:23:10,317 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:23:10,318 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:24:07,995 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:24:07,996 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:24:08,005 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:24:08,006 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:24:21,319 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:24:21,319 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:24:21,320 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:24:21,324 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:24:22,010 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@3bb21789)
+2021-10-22 14:24:31,741 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:24:31,741 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:24:31,747 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:24:31,751 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:25:05,357 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:25:05,358 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:26:14,333 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:26:14,334 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:26:14,361 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:26:14,361 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:26:18,015 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:26:18,015 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:26:18,016 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:26:18,016 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:26:18,221 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-3] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@c92c1da)
+2021-10-22 14:26:37,582 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:26:37,583 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:26:37,585 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:26:37,586 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:26:47,438 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:26:47,440 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:31:11,612 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:31:11,613 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:31:11,626 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:31:11,626 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:31:12,017 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:31:12,017 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:31:12,048 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-5] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@61c55e)
+2021-10-22 14:31:12,071 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:31:12,071 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:31:15,752 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:31:15,753 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:31:15,759 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:31:15,759 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:31:20,474 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:31:20,475 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:31:27,788 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:31:27,789 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:31:29,076 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:31:29,076 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:31:31,842 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:31:31,843 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:31:35,874 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:31:35,875 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:36:26,426 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:36:26,427 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:36:30,753 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:36:30,754 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:39:44,332 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:39:44,333 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:39:47,087 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:39:47,088 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:41:18,780 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:41:18,785 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:41:18,790 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:41:18,790 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:41:19,147 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:41:19,148 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:41:19,155 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@6f1806a5)
+2021-10-22 14:41:19,181 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:41:19,182 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:41:20,877 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:41:20,877 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:41:20,881 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:41:20,881 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:42:20,097 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:42:20,098 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:42:20,998 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:42:20,998 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:42:25,590 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:42:25,591 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:42:41,980 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:42:41,980 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:42:42,841 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:42:42,842 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:43:09,648 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:43:09,648 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:43:15,384 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:43:15,384 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 14:43:21,648 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 14:43:21,648 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 14:43:24,319 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 14:43:24,321 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 14:43:26,746 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:43:26,746 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:43:38,665 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:43:38,665 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:43:45,217 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:43:45,218 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:43:53,930 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 14:43:53,931 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 14:52:08,023 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:52:08,024 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:55:27,560 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 14:55:27,561 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 14:56:53,867 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 14:56:58,701 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 14:57:16,228 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 14:57:16,230 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 14:57:16,236 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-5] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@1ba3dd99)
+2021-10-22 14:58:21,047 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 14:58:21,048 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 14:58:21,062 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@6bf2e844)
+2021-10-22 14:58:35,989 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 14:58:35,990 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 14:58:44,639 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 14:58:44,642 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 14:58:44,644 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 14:58:44,644 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:03:56,462 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 15:03:56,462 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:31:51,985 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token has expired
+2021-10-22 15:31:58,568 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2021-10-22 15:31:58,740 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-9] [ROLE_USER]
+2021-10-22 15:32:26,035 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 15:32:26,036 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:32:42,036 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 15:32:42,037 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:42:29,604 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 15:42:29,604 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 15:42:29,629 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 15:42:29,630 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:42:29,861 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 15:42:29,863 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 15:42:29,873 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@376721d8)
+2021-10-22 15:42:29,924 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 15:42:29,924 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:42:33,727 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 15:42:33,728 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:42:33,729 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 15:42:33,730 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:42:42,710 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 15:42:42,711 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 15:42:47,586 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 15:42:47,587 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:42:54,579 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 15:42:54,579 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 15:42:57,850 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 15:42:57,851 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 15:42:59,540 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 15:42:59,541 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:43:00,354 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 15:43:00,355 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:44:09,270 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 15:44:09,270 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:45:15,572 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2021-10-22 15:45:32,054 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2021-10-22 15:45:32,212 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2021-10-22 15:45:39,857 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2021-10-22 15:45:53,094 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2021-10-22 15:45:53,223 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-1] [ROLE_USER]
+2021-10-22 15:45:53,394 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 15:45:53,394 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:45:53,396 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 15:45:53,397 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:45:53,401 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@9905b23)
+2021-10-22 15:46:00,160 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] user
+2021-10-22 15:46:00,162 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 15:46:00,345 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] user
+2021-10-22 15:46:00,346 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:46:34,619 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 15:46:34,620 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:49:30,211 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 15:49:30,213 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 15:49:30,243 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 15:49:30,243 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 15:49:30,467 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 15:49:30,470 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:49:30,478 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@6d015eb0)
+2021-10-22 15:49:30,540 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] admin
+2021-10-22 15:49:30,541 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:49:30,634 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] user
+2021-10-22 15:49:30,634 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 15:49:30,809 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] user
+2021-10-22 15:49:30,810 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 15:49:30,826 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@3c03755)
+2021-10-22 15:49:36,493 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] user
+2021-10-22 15:49:36,497 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 15:49:36,693 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 15:49:36,694 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:50:07,450 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 15:50:07,451 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:50:07,949 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 15:50:07,949 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 15:50:07,957 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 15:50:07,958 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:50:07,958 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@543dd174)
+2021-10-22 15:50:13,606 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 15:50:13,608 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 15:50:13,789 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 15:50:13,790 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:50:40,598 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] user
+2021-10-22 15:50:40,599 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 15:50:41,664 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] user
+2021-10-22 15:50:41,665 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:50:41,671 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@78e5afa8)
+2021-10-22 15:50:49,193 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 15:50:49,193 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:50:49,922 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 15:50:49,922 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:51:19,659 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 15:51:19,659 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 15:51:22,360 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 15:51:22,360 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:51:24,558 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 15:51:24,561 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 15:51:24,569 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@3b2fc395)
+2021-10-22 15:51:27,378 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 15:51:27,380 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:54:32,744 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 15:54:32,744 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] user
+2021-10-22 15:54:32,744 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 15:54:32,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 15:54:32,744 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] user
+2021-10-22 15:54:32,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 15:54:32,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:54:32,745 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 15:54:32,764 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@3c673b8b)
+2021-10-22 15:54:32,766 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@2d88300a)
+2021-10-22 15:54:43,838 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 15:54:43,838 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:54:44,021 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 15:54:44,022 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:55:22,141 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 15:55:22,142 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 15:55:22,604 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] user
+2021-10-22 15:55:22,604 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 15:55:22,612 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@61658175)
+2021-10-22 15:55:24,175 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 15:55:24,176 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 15:55:24,375 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 15:55:24,376 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 15:55:33,813 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] user
+2021-10-22 15:55:33,815 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 15:55:35,996 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] user
+2021-10-22 15:55:35,996 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 15:55:36,146 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 15:55:36,147 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 15:57:09,361 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 82114 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 15:57:09,367 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 15:57:09,369 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 15:57:14,608 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtRequestFilter' configured for use
+2021-10-22 15:57:15,893 INFO org.springframework.boot.StartupInfoLogger [main] Started OnlineExaminationSystemApplication in 7.492 seconds (JVM running for 8.789)
+2021-10-22 16:00:12,136 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] user
+2021-10-22 16:00:12,137 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 16:00:12,292 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-3] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@723813c5)
+2021-10-22 16:46:52,199 INFO org.springframework.boot.StartupInfoLogger [main] Starting OnlineExaminationSystemApplication using Java 1.8.0_292 on thinkpad with PID 95555 (/mnt/storage/Project/online-examination-system/target/classes started by luongtx in /mnt/storage/Project/online-examination-system)
+2021-10-22 16:46:52,203 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-10-22 16:46:52,210 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-22 16:46:59,671 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'jwtRequestFilter' configured for use
+2021-10-22 16:47:01,100 INFO org.springframework.boot.StartupInfoLogger [main] Started OnlineExaminationSystemApplication in 10.208 seconds (JVM running for 12.584)
+2021-10-22 16:47:21,428 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2021-10-22 16:47:21,926 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-2] [ROLE_ADMIN]
+2021-10-22 16:47:22,034 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 16:47:22,035 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 16:47:22,087 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@56df0cba)
+2021-10-22 16:49:33,485 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2021-10-22 16:49:33,632 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-7] [ROLE_USER]
+2021-10-22 16:49:33,757 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 16:49:33,758 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 16:49:33,770 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@4e946310)
+2021-10-22 16:49:40,906 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 16:49:40,935 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 16:49:40,942 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 16:49:40,948 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 16:49:40,951 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 16:49:40,957 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 16:49:40,961 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 16:49:40,965 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 16:49:40,969 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 16:49:40,975 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 16:49:40,981 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 16:49:40,984 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 16:49:40,987 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 16:49:40,990 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 16:49:40,996 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 16:49:41,004 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 16:49:41,008 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 16:49:49,181 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 16:49:49,188 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 16:49:49,195 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 16:49:49,206 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 16:49:49,210 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 16:49:49,221 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 16:49:49,224 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 16:49:49,230 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 16:49:49,233 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 16:49:49,235 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 16:49:49,239 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 16:49:49,241 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 16:49:49,244 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 16:49:49,246 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 16:49:49,248 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 16:49:49,250 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 16:49:49,252 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 16:49:53,235 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 16:49:53,239 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 16:49:53,241 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 16:49:53,245 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 16:49:53,248 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 16:49:53,253 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 16:49:53,255 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 16:49:53,257 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 16:49:53,258 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 16:49:53,260 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 16:49:53,261 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 16:49:53,264 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 16:49:53,266 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 16:49:53,268 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 16:49:53,270 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 16:49:53,272 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 16:49:53,274 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 16:51:47,241 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 16:51:47,244 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 16:51:47,247 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 16:51:47,250 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 16:51:47,252 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 16:51:47,257 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 16:51:47,260 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 16:51:47,263 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 16:51:47,265 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 16:51:47,269 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 16:51:47,272 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 16:51:47,273 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 16:51:47,275 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 16:51:47,277 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 16:51:47,279 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 16:51:47,281 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 16:51:47,282 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-9] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 16:52:26,170 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 16:52:26,171 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 16:52:26,236 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@302c35ba)
+2021-10-22 16:54:40,014 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 16:54:40,022 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 16:54:40,073 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4d8575a1)
+2021-10-22 16:54:41,042 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 16:54:41,043 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 16:54:41,065 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@13a13e1a)
+2021-10-22 16:56:48,051 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 16:56:48,053 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 16:56:48,149 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4185a3c2)
+2021-10-22 16:56:49,575 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 16:56:49,575 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 16:56:49,641 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@4a6f733a)
+2021-10-22 17:01:36,394 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 17:01:36,399 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 17:01:36,459 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@229ae827)
+2021-10-22 17:01:37,956 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] user
+2021-10-22 17:01:37,958 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 17:01:37,983 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@70e76c87)
+2021-10-22 17:03:59,109 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 17:03:59,114 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 17:03:59,175 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@5e016647)
+2021-10-22 17:03:59,498 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] user
+2021-10-22 17:03:59,499 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-5] Validate the token
+2021-10-22 17:03:59,573 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-5] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@298597e)
+2021-10-22 17:09:24,401 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] admin
+2021-10-22 17:09:24,402 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 17:09:24,413 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@327e06b4)
+2021-10-22 17:09:24,473 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 17:09:24,473 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 17:09:24,483 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@334fcca5)
+2021-10-22 17:16:21,399 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] admin
+2021-10-22 17:16:21,400 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-2] Validate the token
+2021-10-22 17:16:21,434 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-2] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@70973113)
+2021-10-22 17:16:22,611 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 17:16:22,612 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 17:16:22,623 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@7bc3115e)
+2021-10-22 17:19:19,478 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] Question{id=null, content='How can i help you', answers=[Answer{id=null, content='I don't know', isCorrect=false}, Answer{id=null, content='I'm ok', isCorrect=true}, Answer{id=null, content='Shut your mouth off', isCorrect=false}], examId=1}
+2021-10-22 17:19:34,800 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-4] Question{id=null, content='How can i help your mom', answers=[Answer{id=null, content='I'm ok', isCorrect=false}, Answer{id=null, content='Shut your mouth off', isCorrect=true}], examId=1}
+2021-10-22 17:20:19,908 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 17:20:19,911 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 17:20:19,914 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 17:20:19,920 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 17:20:19,924 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 17:20:19,927 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 17:20:19,929 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 17:20:19,930 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 17:20:19,933 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 17:20:19,936 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 17:20:19,940 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 17:20:19,942 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 17:20:19,943 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 17:20:19,945 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 17:20:19,946 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 17:20:19,948 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 17:20:19,951 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-10] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 17:20:24,170 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 17:20:24,175 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 17:20:24,177 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 17:20:24,181 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 17:20:24,184 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 17:20:24,189 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 17:20:24,193 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 17:20:24,198 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 17:20:24,200 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 17:20:24,202 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 17:20:24,204 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 17:20:24,206 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 17:20:24,207 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 17:20:24,209 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 17:20:24,211 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 17:20:24,212 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 17:20:24,214 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-3] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 17:20:26,313 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 17:20:26,316 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 17:20:26,318 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 17:20:26,321 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 17:20:26,322 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 17:20:26,326 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 17:20:26,329 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 17:20:26,331 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 17:20:26,336 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 17:20:26,338 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 17:20:26,340 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 17:20:26,341 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 17:20:26,342 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 17:20:26,343 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 17:20:26,344 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 17:20:26,346 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 17:20:26,346 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-1] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 17:21:46,204 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] [UserExam(id=17, userId=4, examId=3, finishedDate=2021-10-21T20:40:07, score=100, status=true), UserExam(id=16, userId=4, examId=3, finishedDate=2021-10-21T17:49:55, score=33, status=false), UserExam(id=15, userId=4, examId=2, finishedDate=2021-10-21T17:39:39, score=50, status=false), UserExam(id=14, userId=4, examId=2, finishedDate=2021-10-21T17:39:16, score=100, status=true), UserExam(id=13, userId=4, examId=1, finishedDate=2021-10-21T17:31:33, score=83, status=true), UserExam(id=11, userId=4, examId=1, finishedDate=2021-10-21T12:05:50, score=16, status=false), UserExam(id=10, userId=4, examId=1, finishedDate=2021-10-21T11:59:50, score=83, status=true), UserExam(id=9, userId=4, examId=1, finishedDate=2021-10-21T11:35:22, score=66, status=true), UserExam(id=8, userId=4, examId=1, finishedDate=2021-10-21T11:34:19, score=100, status=true), UserExam(id=7, userId=4, examId=1, finishedDate=2021-10-19T10:28:30, score=100, status=true), UserExam(id=6, userId=4, examId=1, finishedDate=2021-10-19T10:28:01, score=50, status=false), UserExam(id=5, userId=4, examId=1, finishedDate=2021-10-19T10:19:05, score=0, status=false), UserExam(id=4, userId=4, examId=1, finishedDate=2021-10-19T10:18:41, score=100, status=true), UserExam(id=3, userId=4, examId=1, finishedDate=2021-10-19T10:18:31, score=50, status=false), UserExam(id=2, userId=4, examId=1, finishedDate=2021-10-17T21:03:23, score=100, status=true), UserExam(id=1, userId=4, examId=1, finishedDate=2021-10-17T21:03:10, score=50, status=false)]
+2021-10-22 17:21:46,218 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=100, passingScore=65, status=true, finishedAt=2021-10-21T20:40:07)
+2021-10-22 17:21:46,220 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=3, title=Oracle Database 12c Administrator Certified Associate, description=Oracle Database 12c Administrator Certified Associate, score=33, passingScore=65, status=false, finishedAt=2021-10-21T17:49:55)
+2021-10-22 17:21:46,233 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=50, passingScore=65, status=false, finishedAt=2021-10-21T17:39:39)
+2021-10-22 17:21:46,237 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=2, title=Oracle Certificate Professional Java SE 8, description=Oracle Certifcate for Java SE 8 developer professional, score=100, passingScore=65, status=true, finishedAt=2021-10-21T17:39:16)
+2021-10-22 17:21:46,254 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T17:31:33)
+2021-10-22 17:21:46,257 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=16, passingScore=65, status=false, finishedAt=2021-10-21T12:05:50)
+2021-10-22 17:21:46,267 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=83, passingScore=65, status=true, finishedAt=2021-10-21T11:59:50)
+2021-10-22 17:21:46,272 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=66, passingScore=65, status=true, finishedAt=2021-10-21T11:35:22)
+2021-10-22 17:21:46,289 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-21T11:34:19)
+2021-10-22 17:21:46,299 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:28:30)
+2021-10-22 17:21:46,318 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:28:01)
+2021-10-22 17:21:46,327 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=0, passingScore=65, status=false, finishedAt=2021-10-19T10:19:05)
+2021-10-22 17:21:46,335 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-19T10:18:41)
+2021-10-22 17:21:46,341 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-19T10:18:31)
+2021-10-22 17:21:46,377 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=100, passingScore=65, status=true, finishedAt=2021-10-17T21:03:23)
+2021-10-22 17:21:46,403 INFO com.luongtx.oes.service.impl.ExamServiceImpl [http-nio-8080-exec-5] ExamResultDTO(examId=1, title=Oracle Certificate Associate JavaSE 8, description=Oracle Certification for JavaSE 8 Developer, score=50, passingScore=65, status=false, finishedAt=2021-10-17T21:03:10)
+2021-10-22 17:21:46,553 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] user
+2021-10-22 17:21:46,554 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 17:21:46,600 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 17:21:46,601 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 17:21:46,649 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-3] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@6bec0ff0)
+2021-10-22 17:21:46,650 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@7cf5d049)
+2021-10-22 17:43:50,188 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] admin
+2021-10-22 17:43:50,194 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 17:43:50,241 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4228cb73)
+2021-10-22 17:43:51,896 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 17:43:51,896 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 17:43:51,907 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@1a98ceb2)
+2021-10-22 17:47:08,096 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] admin
+2021-10-22 17:47:08,098 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 17:47:08,156 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@2f6389e7)
+2021-10-22 17:47:09,299 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 17:47:09,300 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 17:47:09,311 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@4b135bb2)
+2021-10-22 17:53:38,447 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 17:53:38,449 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 17:53:38,483 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@7d7510eb)
+2021-10-22 17:53:40,009 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 17:53:40,010 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 17:53:40,018 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@2cd1d5f7)
+2021-10-22 17:56:11,204 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 17:56:11,207 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 17:56:11,244 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4d2a47cd)
+2021-10-22 17:56:12,826 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] user
+2021-10-22 17:56:12,827 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-10] Validate the token
+2021-10-22 17:56:12,835 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-10] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@77310747)
+2021-10-22 17:58:50,683 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] admin
+2021-10-22 17:58:50,683 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-3] Validate the token
+2021-10-22 17:58:50,706 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-3] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@4c82a6)
+2021-10-22 17:58:51,370 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 17:58:51,371 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 17:58:51,389 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@78734167)
+2021-10-22 18:01:02,830 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] user
+2021-10-22 18:01:02,835 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 18:01:02,954 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@3051a879)
+2021-10-22 18:01:03,253 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] admin
+2021-10-22 18:01:03,254 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-8] Validate the token
+2021-10-22 18:01:03,346 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-8] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@658776c4)
+2021-10-22 18:08:56,459 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] user
+2021-10-22 18:08:56,461 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-4] Validate the token
+2021-10-22 18:08:56,545 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] admin
+2021-10-22 18:08:56,547 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-1] Validate the token
+2021-10-22 18:08:56,563 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-1] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@1aeaa6a8)
+2021-10-22 18:08:56,546 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-4] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@2bced31e)
+2021-10-22 18:19:14,330 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] user
+2021-10-22 18:19:14,332 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] Validate the token
+2021-10-22 18:19:14,377 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-9] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@c203296)
+2021-10-22 18:19:14,631 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 18:19:14,632 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 18:19:14,651 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@62fffefd)
+2021-10-22 18:19:22,806 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] admin
+2021-10-22 18:19:22,806 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 18:19:22,819 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@3f65baee)
+2021-10-22 18:25:25,731 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 18:25:25,734 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 18:25:25,751 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@72310b1a)
+2021-10-22 18:25:25,913 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 18:25:25,914 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 18:25:25,933 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@5166d53d)
+2021-10-22 18:41:14,501 ERROR com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2021-10-22 18:41:14,619 INFO com.luongtx.oes.service.impl.AuthenticationServiceImpl [http-nio-8080-exec-9] [ROLE_USER]
+2021-10-22 18:45:25,179 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] user
+2021-10-22 18:45:25,181 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-7] Validate the token
+2021-10-22 18:45:25,240 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-7] Profile(id=4, fullName=Luong Xuan Tran, gender=male, email=luongtx@gmail.com, phoneNo=0123456, birthDay=2020-10-13, imageSrc=/mnt/storage/uploads/avatar4.jpg, user=com.luongtx.oes.entity.User@c8af3ba)
+2021-10-22 18:45:25,437 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] admin
+2021-10-22 18:45:25,438 INFO com.luongtx.oes.security.filter.JwtRequestFilter [http-nio-8080-exec-6] Validate the token
+2021-10-22 18:45:25,476 INFO com.luongtx.oes.service.impl.ProfileServiceImpl [http-nio-8080-exec-6] Profile(id=3, fullName=Admin, gender=female, email=admin@gmail.com, phoneNo=123456, birthDay=2020-10-19, imageSrc=/mnt/storage/uploads/avatar_2x.png, user=com.luongtx.oes.entity.User@706fd369)

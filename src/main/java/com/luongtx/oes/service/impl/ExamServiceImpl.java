@@ -17,6 +17,8 @@ import com.luongtx.oes.service.utils.ImageUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,6 +55,12 @@ public class ExamServiceImpl implements ExamService {
                 .stream()
                 .map(this::examToExamDTO)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Page<ExamDTO> findAll(Pageable pageable) {
+        Page<Exam> pageExams = examRepo.findAll(pageable);
+        return pageExams.map(this::examToExamDTO);
     }
 
     public Exam findById(Long id) {
@@ -163,8 +171,13 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public List<Question> findQuestionsByExamId(Long id) {
-        return examRepo.findById(id).orElse(new Exam()).getQuestions();
+    public List<Question> findAllQuestions(Long examId) {
+        return examRepo.findById(examId).orElse(new Exam()).getQuestions();
+    }
+
+    @Override
+    public Page<Question> findAllQuestions(Long examId, Pageable pageable) {
+        return questionRepo.findAllByExamId(examId, pageable);
     }
 
     public int findNumberOfQuestions(Long id) {
