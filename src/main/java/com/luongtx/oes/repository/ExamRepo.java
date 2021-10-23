@@ -1,10 +1,13 @@
 package com.luongtx.oes.repository;
 
 import com.luongtx.oes.entity.Exam;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 public interface ExamRepo extends JpaRepository<Exam, Long> {
 
-//    @Query("update user_exam ue set ue.score=?3, ue.status=?4 where ue.userId=?1 and ue.examId=?2")
-//    void updateExamResultForUser(Long userId, Long examId, Integer score, Boolean status);
+    @Query("select e from exam e where e.examCode like %?1% or e.title like %?1% or e.description like %?1%")
+    Page<Exam> findAll(Pageable pageable, String keyword);
 }
