@@ -1,6 +1,7 @@
 package com.luongtx.oes.service.impl;
 
 
+import com.luongtx.oes.constants.AppConstants;
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.exception.ApplicationUserException;
@@ -71,7 +72,7 @@ public class ProfileServiceImpl implements ProfileService {
         profileDTO.setGender(profile.getGender());
         profileDTO.setPhoneNo(profile.getPhoneNo());
         profileDTO.setBirthDay(profile.getBirthDay());
-        String base64Image = ImageUtils.encodeToBased64(profile.getImageSrc());
+        String base64Image = resolveProfileImage(profileDTO.getImageSrc());
         profileDTO.setImageSrc(base64Image);
         return profileDTO;
     }
@@ -79,5 +80,12 @@ public class ProfileServiceImpl implements ProfileService {
     Profile retrieveProfileFromToken(String token) {
         String username = jwtTokenUtil.getUsernameFromToken(token.substring(7));
         return profileRepo.findByUsername(username);
+    }
+
+    String resolveProfileImage(String imageSrc) {
+        if (imageSrc == null) {
+            imageSrc = AppConstants.DEFAULT_PROFILE_IMAGE_PATH;
+        }
+        return ImageUtils.encodeToBased64(imageSrc);
     }
 }
