@@ -25,12 +25,6 @@ public class Category {
     @Column(name = "NAME")
     private String name;
 
-//    @Column(name = "MOD_DATE")
-//    private LocalDateTime modDate;
-//
-//    @Column(name = "REG_DATE")
-//    private LocalDateTime regDate;
-
     @OneToMany(mappedBy = "category")
     @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
