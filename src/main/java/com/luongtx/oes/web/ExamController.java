@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -32,17 +33,18 @@ public class ExamController {
     @GetMapping(path = "")
     public ResponseEntity<Map<String, Object>> getAllExams(
             @RequestParam(name = "page", required = false) Integer page,
-            @RequestParam(name = "size", required = false) Integer size
+            @RequestParam(name = "size", required = false) Integer size,
+            @RequestParam(name = "sort", required = false, defaultValue = "id") String sortKey,
+            @RequestParam(name = "search", required = false, defaultValue = "") String searchKey
     ) {
         Map<String, Object> response = new HashMap<>();
         if (page == null || size == null) {
             List<ExamDTO> examDTOS = examService.findAll();
             response.put(PageConstants.DATA, examDTOS);
         } else {
-            Pageable pageable = PageRequest.of(page, size);
-            Page<ExamDTO> pageExamDTOs = examService.findAll(pageable);
+            Pageable pageable = PageRequest.of(page, size, Sort.by(sortKey));
+            Page<ExamDTO> pageExamDTOs = examService.findAll(pageable, searchKey);
             response.put(PageConstants.DATA, pageExamDTOs.getContent());
-//            response.put(PageConstants.TOTAL_ITEM, pageExamDTOs.getTotalElements());
             response.put(PageConstants.TOTAL_PAGE, pageExamDTOs.getTotalPages());
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
@@ -68,7 +70,6 @@ public class ExamController {
             Pageable pageable = PageRequest.of(page, size);
             Page<Question> pageQuestions = examService.findAllQuestions(examId, pageable);
             response.put(PageConstants.DATA, pageQuestions.getContent());
-//            response.put(PageConstants.TOTAL_ITEM, pageQuestions.getTotalElements());
             response.put(PageConstants.TOTAL_PAGE, pageQuestions.getTotalPages());
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
