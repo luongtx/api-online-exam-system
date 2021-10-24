@@ -60,8 +60,8 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public Page<ExamDTO> findAll(Pageable pageable, String keyword) {
-        Page<Exam> pageExams = examRepo.findAll(pageable, keyword);
+    public Page<ExamDTO> findAll(Pageable pageable, String searchKey) {
+        Page<Exam> pageExams = examRepo.findAll(pageable, searchKey);
         return pageExams.map(this::convertToExamDTO);
     }
 

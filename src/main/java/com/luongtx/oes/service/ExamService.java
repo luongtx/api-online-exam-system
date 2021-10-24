@@ -13,7 +13,7 @@ public interface ExamService {
 
     List<ExamDTO> findAll();
 
-    Page<ExamDTO> findAll(Pageable pageable, String keyword);
+    Page<ExamDTO> findAll(Pageable pageable, String searchKey);
 
     List<Question> findAllQuestions(Long examId);
 
