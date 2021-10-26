@@ -70,6 +70,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         List<String> roles = getUserRoles(userDetails);
         log.info(roles.toString());
         responseDTO.setRoles(roles);
+        responseDTO.setExpiredAt(System.currentTimeMillis() + JwtTokenUtil.JWT_TOKEN_VALIDITY);
         return responseDTO;
     }
 
@@ -83,8 +84,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             user.setUsername(registerDTO.getUsername());
             user.setPassword(passwordEncoder.encode(registerDTO.getPassword()));
             user.setRoles(new HashSet<>(Collections.singletonList(roleRepo.getById(1L))));
-//            user.setRegDate(LocalDateTime.now());
-//            user.setModDate(LocalDateTime.now());
             User savedUser = userRepo.save(user);
             Profile profile = constructProfile(registerDTO, savedUser);
             profileRepo.save(profile);
