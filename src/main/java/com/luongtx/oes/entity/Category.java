@@ -25,17 +25,11 @@ public class Category {
     @Column(name = "NAME")
     private String name;
 
-//    @Column(name = "MOD_DATE")
-//    private LocalDateTime modDate;
-//
-//    @Column(name = "REG_DATE")
-//    private LocalDateTime regDate;
-
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
 
     @ManyToOne
     @JoinColumn(name = "CATEGORY_PARENT_ID", foreignKey = @ForeignKey(name = "CATEGORY_ID_FK"))
-    Category category;
+    Category categoryParent;
 }

@@ -72,7 +72,7 @@ public class ProfileServiceImpl implements ProfileService {
         profileDTO.setGender(profile.getGender());
         profileDTO.setPhoneNo(profile.getPhoneNo());
         profileDTO.setBirthDay(profile.getBirthDay());
-        String base64Image = resolveProfileImage(profileDTO.getImageSrc());
+        String base64Image = resolveProfileImage(profile.getImageSrc());
         profileDTO.setImageSrc(base64Image);
         return profileDTO;
     }

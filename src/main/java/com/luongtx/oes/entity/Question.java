@@ -31,12 +31,6 @@ public class Question {
 //    @Column(name = "IS_MULTI_OPTIONS")
 //    private boolean isMultipleOptions;
 
-//    @Column(name = "MOD_DATE")
-//    private LocalDateTime modDate;
-//
-//    @Column(name = "REG_DATE")
-//    private LocalDateTime regDate;
-
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonManagedReference
     List<Answer> answers = new ArrayList<>();
