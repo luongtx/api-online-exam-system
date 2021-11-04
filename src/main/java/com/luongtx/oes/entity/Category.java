@@ -25,7 +25,7 @@ public class Category {
     @Column(name = "NAME")
     private String name;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
 

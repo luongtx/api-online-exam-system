@@ -20,6 +20,8 @@ public interface CatalogueService {
     Page<Question> findAllQuestions(Long categoryId, Pageable pageable, String searchKey);
 
     void saveQuestion(Long categoryId, Long questionId);
+    
+    void saveQuestion(Long categoryId, Question question);
 
     void saveQuestions(Long categoryId, List<Question> questions);
 

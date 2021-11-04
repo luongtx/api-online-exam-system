@@ -76,10 +76,16 @@ public class CatalogueController {
         catalogueService.save(categoryDTO);
     }
 
-    @PostMapping("/{id}/save/question/{questionId}")
+    @PutMapping("/{id}/save/question/{questionId}")
     @Secured(RoleConstants.ROLE_ADMIN)
     void saveQuestion(@PathVariable("id") Long categoryId, @PathVariable("questionId") Long questionId) {
         catalogueService.saveQuestion(categoryId, questionId);
+    }
+    
+    @PostMapping("/{id}/new/question/")
+    @Secured(RoleConstants.ROLE_ADMIN)
+    void saveNewQuestion(@PathVariable("id") Long categoryId, @RequestBody Question question) {
+        catalogueService.saveQuestion(categoryId, question);
     }
 
     @PostMapping("/{id}/save/questions")
@@ -88,7 +94,7 @@ public class CatalogueController {
         catalogueService.saveQuestions(categoryId, questionList);
     }
 
-    @PostMapping("/remove/question/{questionId}")
+    @DeleteMapping("/remove/question/{questionId}")
     void removeQuestion(@PathVariable("questionId") Long questionId) {
         catalogueService.removeQuestion(questionId);
     }
