@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.luongtx.oes.dto.CategoryDTO;
 import com.luongtx.oes.entity.Category;
 import com.luongtx.oes.entity.Question;
+import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.CategoryRepo;
 import com.luongtx.oes.repository.QuestionRepo;
 import com.luongtx.oes.service.CatalogueService;
@@ -85,14 +86,12 @@ public class CatalogueServiceImpl implements CatalogueService {
 
 	@Override
 	public void delete(Long id, boolean cascade) {
-		if (!cascade) {
-			List<Question> questions = questionRepo.findAllByCategory(id);
-			questions.forEach((question) -> {
-				question.setCategory(null);
-				questionRepo.save(question);
-			});
+		try {
+			categoryRepo.deleteCategory(id, cascade);
+		} catch (Exception e) {
+			log.error(e.getMessage());
+			throw new ApplicationUserException("Cannot delete category with id: " + id);
 		}
-		categoryRepo.deleteById(id);
 	}
 
 	CategoryDTO convertToDTO(Category category) {
