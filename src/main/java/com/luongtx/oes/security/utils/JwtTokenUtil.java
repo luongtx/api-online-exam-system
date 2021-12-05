@@ -15,12 +15,12 @@ import java.util.function.Function;
 
 @Component
 public class JwtTokenUtil implements Serializable {
-    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 1000;//milliseconds
+    public static final long JWT_TOKEN_VALIDITY = 15 * 60 * 1000;// milliseconds
 
     @Value("${jwt.secret}")
     private String secret;
 
-    //retrieve username from jwt token
+    // retrieve username from jwt token
     public String getUsernameFromToken(String token) {
         return getClaimsAttributeFromToken(token, Claims::getSubject);
     }
@@ -33,7 +33,7 @@ public class JwtTokenUtil implements Serializable {
         return claimsResolver.apply(claims);
     }
 
-    //generate token for user
+    // generate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return Jwts.builder().setClaims(claims)
@@ -44,13 +44,13 @@ public class JwtTokenUtil implements Serializable {
                 .compact();
     }
 
-    //validate token
+    // validate token
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = getUsernameFromToken(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    //check if the token has expired
+    // check if the token has expired
     private Boolean isTokenExpired(String token) {
         final Date expiration = getClaimsAttributeFromToken(token, Claims::getExpiration);
         return expiration.before(new Date());

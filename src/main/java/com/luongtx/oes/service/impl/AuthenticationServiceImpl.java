@@ -1,5 +1,10 @@
 package com.luongtx.oes.service.impl;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import com.luongtx.oes.constants.ApplicationMessageConstant;
 import com.luongtx.oes.dto.LoginRequestDTO;
 import com.luongtx.oes.dto.LoginResponseDTO;
@@ -13,7 +18,7 @@ import com.luongtx.oes.repository.RoleRepo;
 import com.luongtx.oes.repository.UserRepo;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.AuthenticationService;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -25,13 +30,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.extern.log4j.Log4j2;
 
 @Service
-@Slf4j
+@Log4j2
 public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Autowired
@@ -68,7 +70,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         final UserDetails userDetails = userDetailsService.loadUserByUsername(loginDTO.getUsername());
         responseDTO.setToken(jwtTokenUtil.generateToken(userDetails));
         List<String> roles = getUserRoles(userDetails);
-        log.info(roles.toString());
+        log.debug(roles);
         responseDTO.setRoles(roles);
         responseDTO.setExpiredAt(System.currentTimeMillis() + JwtTokenUtil.JWT_TOKEN_VALIDITY);
         return responseDTO;
