@@ -1,6 +1,5 @@
 package com.luongtx.oes.service.impl;
 
-
 import com.luongtx.oes.constants.AppConstants;
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.entity.Profile;
@@ -10,16 +9,17 @@ import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
 import com.luongtx.oes.service.utils.FileUtils;
 import com.luongtx.oes.service.utils.ImageUtils;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-@Service
-@Slf4j
-public class ProfileServiceImpl implements ProfileService {
+import lombok.extern.log4j.Log4j2;
 
+@Service
+@Log4j2
+public class ProfileServiceImpl implements ProfileService {
 
     @Autowired
     ProfileRepo profileRepo;
@@ -34,7 +34,7 @@ public class ProfileServiceImpl implements ProfileService {
 
     public ProfileDTO getCurrentUserProfile(String userToken) {
         Profile profile = retrieveProfileFromToken(userToken);
-        log.info(profile.toString());
+        log.debug(profile);
         return convertToProfileDTO(profile);
     }
 
@@ -47,7 +47,7 @@ public class ProfileServiceImpl implements ProfileService {
             profile.setGender(profileDTO.getGender());
             profile.setPhoneNo(profileDTO.getPhoneNo());
             profile.setBirthDay(profileDTO.getBirthDay());
-            log.info(profile.toString());
+            log.debug(profile);
             profileRepo.save(profile);
         } catch (Exception e) {
             log.error(e.getMessage());
@@ -57,12 +57,16 @@ public class ProfileServiceImpl implements ProfileService {
 
     @Override
     public void uploadProfileImage(String userToken, MultipartFile file) {
-        Profile profile = retrieveProfileFromToken(userToken);
-        String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
-        if (uploadedFilePath != null) {
-            profile.setImageSrc(uploadedFilePath);
+        try {
+            Profile profile = retrieveProfileFromToken(userToken);
+            String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+            if (uploadedFilePath != null) {
+                profile.setImageSrc(uploadedFilePath);
+            }
+            profileRepo.save(profile);
+        } catch (Exception e) {
+            log.error(e.getMessage());
         }
-        profileRepo.save(profile);
     }
 
     ProfileDTO convertToProfileDTO(Profile profile) {

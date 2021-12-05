@@ -1,18 +1,20 @@
 package com.luongtx.oes.service.utils;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-@Slf4j
+import org.springframework.web.multipart.MultipartFile;
+
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class FileUtils {
     public static String uploadFile(MultipartFile imageFile, String uploadPath) {
-        if (imageFile == null) return null;
+        if (imageFile == null)
+            return null;
         String uploadedFilePath = null;
         try {
             String imageFileName = imageFile.getOriginalFilename();
@@ -21,8 +23,7 @@ public class FileUtils {
                     StandardCopyOption.REPLACE_EXISTING);
             uploadedFilePath = absoluteFilePath.toString();
         } catch (IOException e) {
-            log.error(e.getMessage());
-            e.printStackTrace();
+            log.error("[FileUtils] Upload file", e);
         }
         return uploadedFilePath;
     }

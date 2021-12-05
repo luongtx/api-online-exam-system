@@ -1,5 +1,10 @@
 package com.luongtx.oes.service.impl;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import com.luongtx.oes.constants.AppConstants;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
@@ -15,7 +20,7 @@ import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.service.utils.FileUtils;
 import com.luongtx.oes.service.utils.ImageUtils;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
@@ -25,13 +30,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.extern.log4j.Log4j2;
 
 @Service
-@Slf4j
+@Log4j2
 public class ExamServiceImpl implements ExamService {
 
     @Autowired
@@ -93,7 +95,7 @@ public class ExamServiceImpl implements ExamService {
         resultDTO.setPassingScore(exam.getPassingScore());
         resultDTO.setStatus(resultDTO.getScore() >= exam.getPassingScore());
         resultDTO.setFinishedAt(LocalDateTime.now());
-        log.info(resultDTO.toString());
+        log.debug(resultDTO);
         updateUserExamResult(userToken, examId, resultDTO);
         return resultDTO;
     }
@@ -155,7 +157,7 @@ public class ExamServiceImpl implements ExamService {
     @Override
     public void saveQuestion(Question question, Long examId) {
         question.setExam(findById(examId));
-        log.info(question.toString());
+        log.debug(question);
         questionRepo.save(question);
     }
 
