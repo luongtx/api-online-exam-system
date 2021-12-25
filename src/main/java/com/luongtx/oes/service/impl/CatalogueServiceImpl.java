@@ -73,7 +73,7 @@ public class CatalogueServiceImpl implements CatalogueService {
 	@Override
 	public void saveQuestions(Long categoryId, List<Question> questions) {
 		Category category = categoryRepo.getById(categoryId);
-		category.setQuestions(questions);
+		category.addQuestions(questions);
 		categoryRepo.save(category);
 	}
 

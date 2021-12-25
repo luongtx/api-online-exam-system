@@ -44,4 +44,8 @@ public class Category {
     @ManyToOne
     @JoinColumn(name = "CATEGORY_PARENT_ID", foreignKey = @ForeignKey(name = "CATEGORY_ID_FK"))
     Category categoryParent;
+
+    public void addQuestions(List<Question> questions) {
+        this.questions.addAll(questions);
+    }
 }

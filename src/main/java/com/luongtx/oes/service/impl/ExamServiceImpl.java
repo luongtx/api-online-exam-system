@@ -237,7 +237,6 @@ public class ExamServiceImpl implements ExamService {
         dto.setFinishedAt(userExam.getFinishedDate());
         String based64ImageSrc = resolveBannerImage(exam.getBannerImage());
         dto.setBannerImage(based64ImageSrc);
-//        log.info(dto.toString());
         return dto;
     }
 

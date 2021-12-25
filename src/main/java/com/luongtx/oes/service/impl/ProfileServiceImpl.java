@@ -10,6 +10,7 @@ import com.luongtx.oes.service.ProfileService;
 import com.luongtx.oes.utils.FileUtils;
 import com.luongtx.oes.utils.ImageUtils;
 
+import com.luongtx.oes.utils.converter.ProfileConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,8 +33,10 @@ public class ProfileServiceImpl implements ProfileService {
     @Override
     public ProfileDTO getCurrentUserProfile(String userToken) {
         Profile profile = retrieveProfileFromToken(userToken);
+        String profileImage = resolveProfileImage(profile.getImageSrc());
+        profile.setImageSrc(profileImage);
         log.debug(profile);
-        return convertToProfileDTO(profile);
+        return ProfileConverter.convertToProfileDTO(profile);
     }
 
     @Override
@@ -65,18 +68,6 @@ public class ProfileServiceImpl implements ProfileService {
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-    }
-
-    ProfileDTO convertToProfileDTO(Profile profile) {
-        ProfileDTO profileDTO = new ProfileDTO();
-        profileDTO.setEmail(profile.getEmail());
-        profileDTO.setFullName(profile.getFullName());
-        profileDTO.setGender(profile.getGender());
-        profileDTO.setPhoneNo(profile.getPhoneNo());
-        profileDTO.setBirthDay(profile.getBirthDay());
-        String base64Image = resolveProfileImage(profile.getImageSrc());
-        profileDTO.setImageSrc(base64Image);
-        return profileDTO;
     }
 
     Profile retrieveProfileFromToken(String token) {
