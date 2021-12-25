@@ -1,4 +1,4 @@
-package com.luongtx.oes.service.utils;
+package com.luongtx.oes.utils;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -23,7 +23,7 @@ public class ImageUtils {
             ImageIO.write(bufferedImage, getFileExtension(path), bos);
             byte[] bytes = Base64.getEncoder().encode(bos.toByteArray());
             binary = AppConstants.BASE64PREFIX + new String(bytes, StandardCharsets.UTF_8);
-            log.debug(binary);
+//            log.debug(binary);
         } catch (Exception e) {
             log.error("[ImageUtils] EncodeBase64", e);
         }

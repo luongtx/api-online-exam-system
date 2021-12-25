@@ -27,4 +27,10 @@ public interface QuestionRepo extends JpaRepository<Question, Long> {
 	@Query("select q from question q join category c on q.category.id=c.id "
 			+ "where q.category.id = ?1 or c.categoryParent.id = ?1")
 	List<Question> findAllByCategory(Long categoryId);
+
+	@Query("select q from question q where q.content like  %?1%")
+	Page<Question> findAll(Pageable pageable, String searchKey);
+
+	@Query("select q from question q where q.content like %?1% and q.category.id is null or q.category.id <> ?2")
+	Page<Question> findAllExceptCatalog(Pageable pageable, String searchKey, Long catalogId);
 }

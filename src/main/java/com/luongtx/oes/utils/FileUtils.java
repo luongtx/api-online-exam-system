@@ -1,4 +1,4 @@
-package com.luongtx.oes.service.utils;
+package com.luongtx.oes.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -18,8 +18,8 @@ import com.luongtx.oes.repository.UserExamRepo;
 import com.luongtx.oes.repository.UserRepo;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
-import com.luongtx.oes.service.utils.FileUtils;
-import com.luongtx.oes.service.utils.ImageUtils;
+import com.luongtx.oes.utils.FileUtils;
+import com.luongtx.oes.utils.ImageUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

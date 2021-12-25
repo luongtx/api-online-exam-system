@@ -7,8 +7,8 @@ import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
-import com.luongtx.oes.service.utils.FileUtils;
-import com.luongtx.oes.service.utils.ImageUtils;
+import com.luongtx.oes.utils.FileUtils;
+import com.luongtx.oes.utils.ImageUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
