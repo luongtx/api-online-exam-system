@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.luongtx.oes.constants.AppConstants;
+import com.luongtx.oes.config.ResourcePathConfig;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
 import com.luongtx.oes.entity.Exam;
@@ -22,7 +22,6 @@ import com.luongtx.oes.service.utils.FileUtils;
 import com.luongtx.oes.service.utils.ImageUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -51,8 +50,8 @@ public class ExamServiceImpl implements ExamService {
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
-    @Value("${upload.path}")
-    String uploadPath;
+    @Autowired
+    ResourcePathConfig pathConfig;
 
     public List<ExamDTO> findAll() {
         return examRepo.findAll()
@@ -123,7 +122,7 @@ public class ExamServiceImpl implements ExamService {
     @Override
     public void save(ExamDTO examDTO, MultipartFile file) {
         Exam exam = convertToExam(examDTO);
-        String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+        String uploadedFilePath = FileUtils.uploadFile(file, pathConfig.getUploadPath());
         if (uploadedFilePath != null) {
             exam.setBannerImage(uploadedFilePath);
         }
@@ -136,7 +135,7 @@ public class ExamServiceImpl implements ExamService {
         if (examId != null) {
             exam = findById(examId);
         }
-        String imageSource = FileUtils.uploadFile(file, uploadPath);
+        String imageSource = FileUtils.uploadFile(file, pathConfig.getUploadPath());
         exam.setBannerImage(imageSource);
         Exam savedExam = examRepo.save(exam);
         return savedExam.getId();
@@ -244,7 +243,7 @@ public class ExamServiceImpl implements ExamService {
 
     String resolveBannerImage(String imageSrc) {
         if (imageSrc == null) {
-            imageSrc = AppConstants.DEFAULT_EXAM_BANNER_PATH;
+            imageSrc = pathConfig.getUploadPath() + pathConfig.getDefaultCertImage();
         }
         return ImageUtils.encodeToBased64(imageSrc);
     }

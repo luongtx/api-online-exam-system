@@ -1,6 +1,6 @@
 package com.luongtx.oes.service.impl;
 
-import com.luongtx.oes.constants.AppConstants;
+import com.luongtx.oes.config.ResourcePathConfig;
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.exception.ApplicationUserException;
@@ -11,7 +11,6 @@ import com.luongtx.oes.service.utils.FileUtils;
 import com.luongtx.oes.service.utils.ImageUtils;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,11 +26,10 @@ public class ProfileServiceImpl implements ProfileService {
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
-    @Value("${upload.path}")
-    String uploadPath;
+    @Autowired
+    ResourcePathConfig pathConfig;
 
     @Override
-
     public ProfileDTO getCurrentUserProfile(String userToken) {
         Profile profile = retrieveProfileFromToken(userToken);
         log.debug(profile);
@@ -59,7 +57,7 @@ public class ProfileServiceImpl implements ProfileService {
     public void uploadProfileImage(String userToken, MultipartFile file) {
         try {
             Profile profile = retrieveProfileFromToken(userToken);
-            String uploadedFilePath = FileUtils.uploadFile(file, uploadPath);
+            String uploadedFilePath = FileUtils.uploadFile(file, pathConfig.getUploadPath());
             if (uploadedFilePath != null) {
                 profile.setImageSrc(uploadedFilePath);
             }
@@ -88,7 +86,7 @@ public class ProfileServiceImpl implements ProfileService {
 
     String resolveProfileImage(String imageSrc) {
         if (imageSrc == null) {
-            imageSrc = AppConstants.DEFAULT_PROFILE_IMAGE_PATH;
+            imageSrc = pathConfig.getUploadPath() +  pathConfig.getDefaultProfileImage();
         }
         return ImageUtils.encodeToBased64(imageSrc);
     }
