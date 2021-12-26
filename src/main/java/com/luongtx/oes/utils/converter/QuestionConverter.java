@@ -7,8 +7,8 @@ public class QuestionConverter {
     public static QuestionDTO convertEntityToDTO(Question question) {
         Long categoryId = null;
         Long examId = null;
-        if(question.getCategory() != null) {
-            categoryId = question.getCategory().getId();
+        if(question.getCatalog() != null) {
+            categoryId = question.getCatalog().getId();
         }
         if(question.getExam() != null) {
             examId = question.getExam().getId();
@@ -17,7 +17,7 @@ public class QuestionConverter {
                 .id(question.getId())
                 .content(question.getContent())
                 .examId(examId)
-                .categoryId(categoryId)
+                .catalogId(categoryId)
                 .build();
     }
 }

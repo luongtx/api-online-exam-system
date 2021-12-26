@@ -13,24 +13,20 @@ public interface QuestionRepo extends JpaRepository<Question, Long> {
 	@Query("select count(q.id) from question q where q.exam.id = ?1")
 	int countQuestionsByExamId(Long examId);
 
-	@Query("select count(q) from question q join category c on q.category.id=c.id "
-			+ "where q.category.id = ?1 or c.categoryParent.id = ?1")
-	long countQuestionsByCategoryId(Long categoryId);
+	@Query("select count(q) from question q join catalog c on q.catalog.id=c.id "
+			+ "where q.catalog.id = ?1 or c.catalogParent.id = ?1")
+	long countQuestionsByCatalogId(Long catalogId);
 
 	@Query("select q from question q where q.exam.id = ?1")
 	Page<Question> findAllByExamId(Long examId, Pageable pageable);
 
-	@Query("select q from question q join category c on q.category.id=c.id "
-			+ "where q.category.id = ?1 or c.categoryParent.id = ?1 and q.content like %?2%")
-	Page<Question> findAllByCategory(Long categoryId, Pageable pageable, String searchKey);
-
-	@Query("select q from question q join category c on q.category.id=c.id "
-			+ "where q.category.id = ?1 or c.categoryParent.id = ?1")
-	List<Question> findAllByCategory(Long categoryId);
+	@Query("select q from question q join catalog c on q.catalog.id=c.id "
+			+ "where q.catalog.id = ?1 or c.catalogParent.id = ?1 and q.content like %?2%")
+	Page<Question> findAllByCatalog(Long catalogId, Pageable pageable, String searchKey);
 
 	@Query("select q from question q where q.content like  %?1%")
 	Page<Question> findAll(Pageable pageable, String searchKey);
 
-	@Query("select q from question q where q.content like %?1% and (q.category.id is null or q.category.id <> ?2)")
+	@Query("select q from question q where q.content like %?1% and (q.catalog.id is null or q.catalog.id <> ?2)")
 	Page<Question> findAllExceptCatalog(Pageable pageable, String searchKey, Long catalogId);
 }

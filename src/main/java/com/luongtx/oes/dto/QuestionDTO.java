@@ -15,5 +15,5 @@ public class QuestionDTO {
     private String content;
     private List<AnswerDTO> answers;
     private Long examId;
-    private Long categoryId;
+    private Long catalogId;
 }

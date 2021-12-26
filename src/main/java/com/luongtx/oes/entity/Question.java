@@ -40,9 +40,9 @@ public class Question {
     private Exam exam;
 
     @ManyToOne
-    @JoinColumn(name = "CATEGORY_ID")
+    @JoinColumn(name = "CATALOG_ID")
     @JsonBackReference
-    private Category category;
+    private Catalog catalog;
 
     public List<Long> getCorrectAnswers() {
         return answers.stream()

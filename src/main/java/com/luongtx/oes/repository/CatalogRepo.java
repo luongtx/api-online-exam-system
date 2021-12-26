@@ -8,13 +8,13 @@ import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.luongtx.oes.entity.Category;
+import com.luongtx.oes.entity.Catalog;
 
 @Repository
-public interface CategoryRepo extends JpaRepository<Category, Long> {
+public interface CatalogRepo extends JpaRepository<Catalog, Long> {
 
-	@Query("select c from category c where c.name like %:key%")
-	Page<Category> findAll(Pageable pageable, @Param("key") String searchKey);
+	@Query("select c from catalog c where c.name like %:key%")
+	Page<Catalog> findAll(Pageable pageable, @Param("key") String searchKey);
 
 	@Procedure
 	void deleteCategory(Long id, Boolean cascade);

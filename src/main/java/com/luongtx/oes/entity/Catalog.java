@@ -26,9 +26,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "category")
-@Table(name = "CATEGORY")
-public class Category {
+@Entity(name = "catalog")
+@Table(name = "CATALOG")
+public class Catalog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -37,13 +37,13 @@ public class Category {
     @Column(name = "NAME")
     private String name;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "CATEGORY_PARENT_ID", foreignKey = @ForeignKey(name = "CATEGORY_ID_FK"))
-    Category categoryParent;
+    @JoinColumn(name = "CATALOG_PARENT_ID", foreignKey = @ForeignKey(name = "CATALOG_ID_FK"))
+    Catalog catalogParent;
 
     public void addQuestions(List<Question> questions) {
         this.questions.addAll(questions);

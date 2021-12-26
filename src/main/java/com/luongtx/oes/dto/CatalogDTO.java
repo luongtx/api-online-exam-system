@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CategoryDTO {
+public class CatalogDTO {
     private Long id;
     private Long parentId;
     private String name;
