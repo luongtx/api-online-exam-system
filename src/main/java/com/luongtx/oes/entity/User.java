@@ -51,4 +51,14 @@ public class User {
     @JoinColumn(name = "PROFILE_ID")
     private Profile profile;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                ", roles=" + roles +
+                '}';
+    }
 }

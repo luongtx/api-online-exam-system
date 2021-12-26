@@ -23,7 +23,7 @@ public interface CatalogService {
     
     void saveQuestion(Long catalogId, Question question);
 
-    void saveQuestions(Long catalogId, List<Question> questions);
+    void saveQuestions(Long catalogId, List<Long> questionIds);
 
     void removeQuestion(Long questionId);
 

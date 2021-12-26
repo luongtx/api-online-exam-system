@@ -45,7 +45,12 @@ public class Catalog {
     @JoinColumn(name = "CATALOG_PARENT_ID", foreignKey = @ForeignKey(name = "CATALOG_ID_FK"))
     Catalog catalogParent;
 
-    public void addQuestions(List<Question> questions) {
-        this.questions.addAll(questions);
+    @Override
+    public String toString() {
+        return "Catalog{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", catalogParent=" + catalogParent.name +
+                '}';
     }
 }

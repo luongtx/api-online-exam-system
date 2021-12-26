@@ -11,7 +11,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-@ToString
 @Entity(name = "profile")
 @Table(name = "PROFILE")
 public class Profile {
@@ -43,4 +42,16 @@ public class Profile {
     @JoinColumn(name = "USER_ID")
     private User user;
 
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", birthDay=" + birthDay +
+                ", user=" + user.getUsername() +
+                '}';
+    }
 }

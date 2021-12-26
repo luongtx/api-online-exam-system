@@ -90,8 +90,8 @@ public class CatalogController {
 
     @PostMapping("/{id}/save/questions")
     @Secured(RoleConstants.ROLE_ADMIN)
-    void saveQuestions(@PathVariable("id") Long catalogId, @RequestBody List<Question> questionList) {
-        catalogService.saveQuestions(catalogId, questionList);
+    void saveQuestions(@PathVariable("id") Long catalogId, @RequestBody List<Long> questionIds) {
+        catalogService.saveQuestions(catalogId, questionIds);
     }
 
     @DeleteMapping("/remove/question/{questionId}")

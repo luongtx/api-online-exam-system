@@ -29,4 +29,6 @@ public interface QuestionRepo extends JpaRepository<Question, Long> {
 
 	@Query("select q from question q where q.content like %?1% and (q.catalog.id is null or q.catalog.id <> ?2)")
 	Page<Question> findAllExceptCatalog(Pageable pageable, String searchKey, Long catalogId);
+
+	List<Question> findAllByIdIn(List<Long> ids);
 }

@@ -35,7 +35,7 @@ public class ProfileServiceImpl implements ProfileService {
         Profile profile = retrieveProfileFromToken(userToken);
         String profileImage = resolveProfileImage(profile.getImageSrc());
         profile.setImageSrc(profileImage);
-        log.debug(profile);
+//        log.debug(profile);
         return ProfileConverter.convertToProfileDTO(profile);
     }
 
@@ -48,7 +48,7 @@ public class ProfileServiceImpl implements ProfileService {
             profile.setGender(profileDTO.getGender());
             profile.setPhoneNo(profileDTO.getPhoneNo());
             profile.setBirthDay(profileDTO.getBirthDay());
-            log.debug(profile);
+//            log.debug(profile);
             profileRepo.save(profile);
         } catch (Exception e) {
             log.error(e.getMessage());
