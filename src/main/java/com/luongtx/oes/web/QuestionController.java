@@ -45,4 +45,10 @@ public class QuestionController {
         response.put(PageConstants.TOTAL_PAGE, questionDTOS.getTotalPages());
         return response;
     }
+
+    @PostMapping("/update")
+    public void updateCatalogQuestion(@RequestBody QuestionDTO questionDTO) {
+        log.debug(questionDTO);
+        questionService.updateCatalogQuestion(questionDTO);
+    }
 }

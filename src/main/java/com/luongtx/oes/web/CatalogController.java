@@ -72,25 +72,13 @@ public class CatalogController {
 
     @PostMapping("/save")
     @Secured(RoleConstants.ROLE_ADMIN)
-    void saveGeneralInfo(@RequestBody CatalogDTO catalogDTO) {
+    void saveCatalogInfo(@RequestBody CatalogDTO catalogDTO) {
         catalogService.save(catalogDTO);
-    }
-
-    @PutMapping("/{id}/save/question/{questionId}")
-    @Secured(RoleConstants.ROLE_ADMIN)
-    void saveQuestion(@PathVariable("id") Long catalogId, @PathVariable("questionId") Long questionId) {
-        catalogService.saveQuestion(catalogId, questionId);
-    }
-    
-    @PostMapping("/{id}/new/question/")
-    @Secured(RoleConstants.ROLE_ADMIN)
-    void saveNewQuestion(@PathVariable("id") Long catalogId, @RequestBody Question question) {
-        catalogService.saveQuestion(catalogId, question);
     }
 
     @PostMapping("/{id}/save/questions")
     @Secured(RoleConstants.ROLE_ADMIN)
-    void saveQuestions(@PathVariable("id") Long catalogId, @RequestBody List<Long> questionIds) {
+    void importQuestions(@PathVariable("id") Long catalogId, @RequestBody List<Long> questionIds) {
         catalogService.saveQuestions(catalogId, questionIds);
     }
 

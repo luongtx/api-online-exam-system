@@ -5,7 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface QuestionService {
-    void save(QuestionDTO questionDTO);
+    void updateCatalogQuestion(QuestionDTO questionDTO);
     Page<QuestionDTO> findAll(Pageable pageable, String searchKey);
     Page<QuestionDTO> findAllExcluded(Pageable pageable, String searchKey, Long catalogId);
 }
