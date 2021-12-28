@@ -1,13 +1,14 @@
 package com.luongtx.oes.service;
 
+import java.util.List;
+
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
-import com.luongtx.oes.entity.Question;
+import com.luongtx.oes.dto.QuestionDTO;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
 
 public interface ExamService {
 
@@ -15,9 +16,7 @@ public interface ExamService {
 
     Page<ExamDTO> findAll(Pageable pageable, String searchKey);
 
-    List<Question> findAllQuestions(Long examId);
-
-    Page<Question> findAllQuestions(Long examId, Pageable pageable);
+    Page<QuestionDTO> findAllQuestions(Long examId, Pageable pageable);
 
     ExamDTO findDetailById(Long id);
 
@@ -33,9 +32,9 @@ public interface ExamService {
 
     void delete(Long id);
 
-    void saveQuestions(List<Question> questions, Long examId);
+    // void saveQuestions(List<Question> questions, Long examId);
 
-    void saveQuestion(Question question, Long examId);
+    void saveQuestion(QuestionDTO questionDTO, Long examId);
 
     void deleteQuestion(Long questionId);
 }

@@ -1,25 +1,32 @@
 package com.luongtx.oes.web;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.luongtx.oes.constants.PageConstants;
 import com.luongtx.oes.constants.RoleConstants;
 import com.luongtx.oes.dto.CatalogDTO;
-import com.luongtx.oes.entity.Question;
+import com.luongtx.oes.dto.QuestionDTO;
 import com.luongtx.oes.service.CatalogService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/catalogues")
-@CrossOrigin(origins = {"http://localhost:4200"})
 public class CatalogController {
 
     @Autowired
@@ -57,7 +64,7 @@ public class CatalogController {
             @RequestParam(value = "sort", required = false, defaultValue = "id") String sortKey) {
         Map<String, Object> response = new HashMap<>();
         Pageable pageable = PageRequest.of(page, size, Sort.by(sortKey));
-        Page<Question> questionPage = catalogService.findAllQuestions(catalogId, pageable, searchKey);
+        Page<QuestionDTO> questionPage = catalogService.findAllQuestions(catalogId, pageable, searchKey);
         response.put(PageConstants.DATA, questionPage.getContent());
         response.put(PageConstants.TOTAL_PAGE, questionPage.getTotalPages());
         return response;

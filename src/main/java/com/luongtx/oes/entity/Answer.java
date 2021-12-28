@@ -23,7 +23,7 @@ public class Answer {
     private String content;
 
     @Column(name = "IS_CORRECT")
-    private boolean isCorrect;
+    private Boolean correct;
 
     @ManyToOne
     @JoinColumn(name = "QUESTION_ID")
@@ -35,7 +35,7 @@ public class Answer {
         return "Answer{" +
                 "id=" + id +
                 ", content='" + content + '\'' +
-                ", isCorrect=" + isCorrect +
+                ", isCorrect=" + correct +
                 '}';
     }
 }

@@ -1,5 +1,7 @@
 package com.luongtx.oes.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,8 +11,10 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class AnswerDTO {
     private Long id;
     private String content;
-    private Boolean isCorrect;
+    private Boolean correct;
 }

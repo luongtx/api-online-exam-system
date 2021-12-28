@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -66,6 +67,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             }
         }
+        log.debug("Access-Control-Allow-Origin: {}", response.getHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN));
         filterChain.doFilter(request, response);
     }
 

@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import com.luongtx.oes.config.ResourcePathConfig;
 import com.luongtx.oes.dto.ExamDTO;
 import com.luongtx.oes.dto.ExamResultDTO;
+import com.luongtx.oes.dto.QuestionDTO;
+import com.luongtx.oes.entity.Answer;
 import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.entity.User;
@@ -20,6 +22,8 @@ import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.utils.FileUtils;
 import com.luongtx.oes.utils.ImageUtils;
+import com.luongtx.oes.utils.converter.AnswerConverter;
+import com.luongtx.oes.utils.converter.QuestionConverter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -105,7 +109,7 @@ public class ExamServiceImpl implements ExamService {
         User user = getUserFromToken(userToken);
         Pageable pageable = PageRequest.of(0, 5);
         List<UserExam> userExams = userExamRepo.getMostRecentByUserId(user.getId(), pageable);
-//        log.info(userExams.toString());
+        // log.info(userExams.toString());
         for (UserExam userExam : userExams) {
             ExamResultDTO dto = convertToExamResultDTO(userExam);
             examResultDTOS.add(dto);
@@ -147,14 +151,13 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public void saveQuestions(List<Question> questions, Long examId) {
-        Exam exam = examRepo.getById(examId);
-        exam.setQuestions(questions);
-        examRepo.save(exam);
-    }
-
-    @Override
-    public void saveQuestion(Question question, Long examId) {
+    public void saveQuestion(QuestionDTO questionDTO, Long examId) {
+        Question question = questionRepo.getById(questionDTO.getId());
+        question.setContent(questionDTO.getContent());
+        List<Answer> answers = questionDTO.getAnswers().stream()
+                .map((dto) -> AnswerConverter.convertDTOToEntity(dto, question))
+                .collect(Collectors.toList());
+        question.setAnswers(answers);
         question.setExam(findById(examId));
         log.debug(question);
         questionRepo.save(question);
@@ -166,13 +169,9 @@ public class ExamServiceImpl implements ExamService {
     }
 
     @Override
-    public List<Question> findAllQuestions(Long examId) {
-        return examRepo.findById(examId).orElse(new Exam()).getQuestions();
-    }
-
-    @Override
-    public Page<Question> findAllQuestions(Long examId, Pageable pageable) {
-        return questionRepo.findAllByExamId(examId, pageable);
+    public Page<QuestionDTO> findAllQuestions(Long examId, Pageable pageable) {
+        return questionRepo.findAllByExamId(examId, pageable)
+                .map(QuestionConverter::convertEntityToDTO);
     }
 
     public int findNumberOfQuestions(Long id) {
@@ -206,7 +205,7 @@ public class ExamServiceImpl implements ExamService {
         exam.setDescription(dto.getDescription());
         exam.setPassingScore(dto.getPassingScore());
         exam.setDuration(dto.getDuration());
-//        exam.setQuestions(dto.getQuestions());
+        // exam.setQuestions(dto.getQuestions());
         return exam;
     }
 
@@ -218,7 +217,7 @@ public class ExamServiceImpl implements ExamService {
         examDTO.setDescription(exam.getDescription());
         examDTO.setPassingScore(exam.getPassingScore());
         examDTO.setDuration(exam.getDuration());
-//        examDTO.setQuestions(exam.getQuestions());
+        // examDTO.setQuestions(exam.getQuestions());
         examDTO.setNumberOfQuestions(exam.getNumberOfQuestions());
         String based64ImageSrc = resolveBannerImage(exam.getBannerImage());
         examDTO.setBannerImageSource(based64ImageSrc);
