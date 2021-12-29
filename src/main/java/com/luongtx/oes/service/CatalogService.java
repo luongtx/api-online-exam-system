@@ -20,8 +20,10 @@ public interface CatalogService {
     Page<QuestionDTO> findAllQuestions(Long catalogId, Pageable pageable, String searchKey);
 
     void saveQuestion(Long catalogId, Long questionId);
-    
+
     void saveQuestions(Long catalogId, List<Long> questionIds);
+
+    // void saveQuestion(QuestionDTO questionDTO);
 
     void removeQuestion(Long questionId);
 

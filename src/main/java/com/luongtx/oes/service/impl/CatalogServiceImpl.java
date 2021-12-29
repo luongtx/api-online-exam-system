@@ -119,4 +119,13 @@ public class CatalogServiceImpl implements CatalogService {
 		return catalog;
 	}
 
+	// @Override
+	// public void saveQuestion(QuestionDTO dto) {
+	// 	try {
+
+	// 	} catch (Exception e) {
+	// 		log.error(String.format("Error while saving question: %s", dto), e);
+	// 	}
+	// }
+
 }

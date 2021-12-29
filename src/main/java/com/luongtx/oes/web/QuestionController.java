@@ -30,10 +30,9 @@ public class QuestionController {
 
     @GetMapping("")
     Map<String, Object> getAllExcludedCatalog(@RequestParam(value = "page", required = false) Integer page,
-                                               @RequestParam(value = "size", required = false) Integer size,
-                                               @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
-                                               @RequestParam(value = "catalog") Long catalogId
-                                               ) {
+            @RequestParam(value = "size", required = false) Integer size,
+            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+            @RequestParam(value = "catalog") Long catalogId) {
 
         Map<String, Object> response = new HashMap<>();
         if (page == null || size == null) {
@@ -52,9 +51,9 @@ public class QuestionController {
         return response;
     }
 
-    @PostMapping("/update")
-    public void updateCatalogQuestion(@RequestBody QuestionDTO questionDTO) {
+    @PostMapping({ "/save", "/update" })
+    public void saveQuestion(@RequestBody QuestionDTO questionDTO) {
         log.debug(questionDTO);
-        questionService.updateCatalogQuestion(questionDTO);
+        questionService.save(questionDTO);
     }
 }

@@ -1,5 +1,6 @@
 package com.luongtx.oes.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -57,15 +58,16 @@ public class Question {
 
     public List<Long> getCorrectAnswers() {
         return answers.stream()
-                .filter(Answer::getCorrect).map(Answer::getId)
+                .filter(Answer::isCorrect).map(Answer::getId)
                 .collect(Collectors.toList());
     }
 
     public void setAnswers(List<Answer> answers) {
-        this.answers.clear();
-        if (answers != null) {
-            this.answers.addAll(answers);
+        if (this.answers == null) {
+            this.answers = new ArrayList<>();
         }
+        this.answers.clear();
+        this.answers.addAll(answers);
     }
 
     @Override

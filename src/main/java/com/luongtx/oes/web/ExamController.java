@@ -67,8 +67,8 @@ public class ExamController {
     @GetMapping(path = { "/{id}/questions", "/{id}/start" })
     public ResponseEntity<Map<String, Object>> getQuestionsByExamId(
             @PathVariable(name = "id") Long examId,
-            @RequestParam(value = "page", required = false) Integer page,
-            @RequestParam(value = "size", required = false) Integer size) {
+            @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
+            @RequestParam(value = "size", required = false, defaultValue = "5") Integer size) {
         Map<String, Object> response = new HashMap<>();
         Pageable pageable = PageRequest.of(page, size);
         Page<QuestionDTO> qPage = examService.findAllQuestions(examId, pageable);
@@ -112,8 +112,9 @@ public class ExamController {
 
     // @PostMapping(value = "/{id}/questions/save")
     // @Secured(RoleConstants.ROLE_ADMIN)
-    // public void saveQuestions(@RequestBody List<Question> questions, @PathVariable("id") Long examId) {
-    //     examService.saveQuestions(questions, examId);
+    // public void saveQuestions(@RequestBody List<Question> questions,
+    // @PathVariable("id") Long examId) {
+    // examService.saveQuestions(questions, examId);
     // }
 
     @PostMapping(value = "/{id}/question/save")

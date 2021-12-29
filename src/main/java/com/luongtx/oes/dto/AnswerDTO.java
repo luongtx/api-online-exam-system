@@ -16,5 +16,5 @@ import lombok.ToString;
 public class AnswerDTO {
     private Long id;
     private String content;
-    private Boolean correct;
+    private boolean correct;
 }

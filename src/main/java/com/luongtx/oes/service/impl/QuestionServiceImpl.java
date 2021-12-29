@@ -1,11 +1,16 @@
 package com.luongtx.oes.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
+import com.luongtx.oes.dto.AnswerDTO;
 import com.luongtx.oes.dto.QuestionDTO;
 import com.luongtx.oes.entity.Answer;
+import com.luongtx.oes.entity.Catalog;
+import com.luongtx.oes.entity.Exam;
 import com.luongtx.oes.entity.Question;
+import com.luongtx.oes.repository.CatalogRepo;
+import com.luongtx.oes.repository.ExamRepo;
 import com.luongtx.oes.repository.QuestionRepo;
 import com.luongtx.oes.service.QuestionService;
 import com.luongtx.oes.utils.converter.AnswerConverter;
@@ -16,22 +21,20 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.log4j.Log4j2;
+
 @Service
+@Log4j2
 public class QuestionServiceImpl implements QuestionService {
 
     @Autowired
     QuestionRepo questionRepo;
 
-    @Override
-    public void updateCatalogQuestion(QuestionDTO questionDTO) {
-        Question question = questionRepo.getById(questionDTO.getId());
-        question.setContent(questionDTO.getContent());
-        List<Answer> answers = questionDTO.getAnswers().stream()
-                .map((answerDTO) -> AnswerConverter.convertDTOToEntity(answerDTO, question))
-                .collect(Collectors.toList());
-        question.setAnswers(answers);
-        questionRepo.save(question);
-    }
+    @Autowired
+    ExamRepo examRepo;
+
+    @Autowired
+    CatalogRepo catalogRepo;
 
     @Override
     public Page<QuestionDTO> findAll(Pageable pageable, String searchKey) {
@@ -42,6 +45,28 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public Page<QuestionDTO> findAllExcluded(Pageable pageable, String searchKey, Long catalogId) {
         return questionRepo.findAllExceptCatalog(pageable, searchKey, catalogId)
-                .map(QuestionConverter:: convertEntityToDTO);
+                .map(QuestionConverter::convertEntityToDTO);
+    }
+
+    @Override
+    public void save(QuestionDTO dto) {
+        try {
+            Question question = dto.getId() != null ? questionRepo.getById(dto.getId()) : new Question();
+            Exam exam = dto.getExamId() != null ? examRepo.getById(dto.getExamId()) : null;
+            Catalog catalog = dto.getCatalogId() != null ? catalogRepo.getById(dto.getCatalogId()) : null;
+            question.setExam(exam);
+            question.setCatalog(catalog);
+            question.setContent(dto.getContent());
+            List<Answer> answers = new ArrayList<>();
+            for (AnswerDTO answerDTO : dto.getAnswers()) {
+                Answer answer = AnswerConverter.convertDTOToEntity(answerDTO);
+                answer.setQuestion(question);
+                answers.add(answer);
+            }
+            question.setAnswers(answers);
+            questionRepo.save(question);
+        } catch (Exception e) {
+            log.error(String.format("Error while saving question: %s", dto), e);
+        }
     }
 }

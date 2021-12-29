@@ -10,7 +10,15 @@ public class AnswerConverter {
                 .id(dto.getId())
                 .content(dto.getContent())
                 .question(question)
-                .correct(dto.getCorrect())
+                .correct(dto.isCorrect())
+                .build();
+    }
+
+    public static Answer convertDTOToEntity(AnswerDTO dto) {
+        return Answer.builder()
+                .id(dto.getId())
+                .content(dto.getContent())
+                .correct(dto.isCorrect())
                 .build();
     }
 
@@ -18,7 +26,7 @@ public class AnswerConverter {
         return AnswerDTO.builder()
                 .id(answer.getId())
                 .content(answer.getContent())
-                .correct(answer.getCorrect())
+                .correct(answer.isCorrect())
                 .build();
     }
 }

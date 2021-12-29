@@ -50,7 +50,7 @@ public class Exam {
     @Transient
     private Integer numberOfQuestions;
 
-    @OneToMany(mappedBy = "exam", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "exam", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST})
     @JsonIgnore
     private List<Question> questions = new ArrayList<>();
 }
