@@ -1,6 +1,6 @@
 package com.luongtx.oes.service.impl;
 
-import com.luongtx.oes.constants.ApplicationMessageConstant;
+import com.luongtx.oes.constants.MessageConstant;
 import com.luongtx.oes.entity.User;
 import com.luongtx.oes.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userRepo.findUserByUsername(s);
         if (user == null) {
-            throw new UsernameNotFoundException(ApplicationMessageConstant.USER_NAME_IS_NOT_FOUND);
+            throw new UsernameNotFoundException(MessageConstant.USER_NAME_IS_NOT_FOUND);
         }
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getRoles());
     }

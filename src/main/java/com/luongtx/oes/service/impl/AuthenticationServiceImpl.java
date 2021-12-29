@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.luongtx.oes.constants.ApplicationMessageConstant;
+import com.luongtx.oes.constants.MessageConstant;
 import com.luongtx.oes.dto.LoginRequestDTO;
 import com.luongtx.oes.dto.LoginResponseDTO;
 import com.luongtx.oes.dto.RegisterRequestDTO;
@@ -65,7 +65,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                     new UsernamePasswordAuthenticationToken(loginDTO.getUsername(), loginDTO.getPassword())
             );
         } catch (BadCredentialsException e) {
-            throw new ApplicationUserException(ApplicationMessageConstant.INCORRECT_USER_NAME_PASSWORD);
+            throw new ApplicationUserException(MessageConstant.INCORRECT_USER_NAME_PASSWORD);
         }
         final UserDetails userDetails = userDetailsService.loadUserByUsername(loginDTO.getUsername());
         responseDTO.setToken(jwtTokenUtil.generateToken(userDetails));
@@ -95,13 +95,13 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-        responseDTO.setMessage(ApplicationMessageConstant.SUCCESSFULLY_REGISTERED);
+        responseDTO.setMessage(MessageConstant.SUCCESSFULLY_REGISTERED);
         return responseDTO;
     }
 
     private void checkUserAvailability(RegisterRequestDTO registerDTO) throws ApplicationUserException {
         if (userRepo.findUserByUsername(registerDTO.getUsername()) != null) {
-            throw new ApplicationUserException(ApplicationMessageConstant.TAKEN_USER_NAME);
+            throw new ApplicationUserException(MessageConstant.TAKEN_USER_NAME);
         }
     }
 
