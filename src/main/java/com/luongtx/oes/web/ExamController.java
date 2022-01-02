@@ -68,7 +68,7 @@ public class ExamController {
     public ResponseEntity<Map<String, Object>> getQuestionsByExamId(
             @PathVariable(name = "id") Long examId,
             @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
-            @RequestParam(value = "size", required = false, defaultValue = "5") Integer size) {
+            @RequestParam(value = "size", required = false, defaultValue = "10000") Integer size) {
         Map<String, Object> response = new HashMap<>();
         Pageable pageable = PageRequest.of(page, size);
         Page<QuestionDTO> qPage = examService.findAllQuestions(examId, pageable);
