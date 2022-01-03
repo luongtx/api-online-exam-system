@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import com.luongtx.oes.dto.QuestionDTO;
 import com.luongtx.oes.entity.Question;
 
 public interface QuestionRepo extends JpaRepository<Question, Long> {
@@ -27,8 +28,11 @@ public interface QuestionRepo extends JpaRepository<Question, Long> {
 	@Query("select q from question q where q.content like  %?1%")
 	Page<Question> findAll(Pageable pageable, String searchKey);
 
-	@Query("select q from question q where q.content like %?1% and (q.catalog.id is null or q.catalog.id <> ?2)")
+	@Query("select q from question q where q.content like %?1% and (q.catalog.id is null or q.catalog.id <> ?2) order by q.id")
 	Page<Question> findAllExceptCatalog(Pageable pageable, String searchKey, Long catalogId);
 
 	List<Question> findAllByIdIn(List<Long> ids);
+
+	@Query("select q from question q where q.content like %?1% and (q.exam.id is null or q.exam.id <> ?2) order by q.id")
+	Page<Question> findAllExceptExam(Pageable pageable, String searchKey, Long examId);
 }

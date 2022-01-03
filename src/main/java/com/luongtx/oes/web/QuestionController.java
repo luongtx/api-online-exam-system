@@ -28,7 +28,20 @@ public class QuestionController {
     @Autowired
     QuestionService questionService;
 
-    @GetMapping("")
+    @GetMapping("/all")
+    Map<String, Object> getAll(@RequestParam(value = "page", required = false) Integer page,
+            @RequestParam(value = "size", required = false, defaultValue = "1000") Integer size,
+            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey) {
+        Map<String, Object> response = new HashMap<>();
+        Pageable pageable = PageRequest.of(page, size);
+        Page<QuestionDTO> questionDTOS = questionService.findAll(pageable, searchKey);
+        log.debug(questionDTOS.getContent());
+        response.put(PageConstants.DATA, questionDTOS.getContent());
+        response.put(PageConstants.TOTAL_PAGE, questionDTOS.getTotalPages());
+        return response;
+    }
+
+    @GetMapping("/exclude-catalog")
     Map<String, Object> getAllExcludedCatalog(@RequestParam(value = "page", required = false) Integer page,
             @RequestParam(value = "size", required = false) Integer size,
             @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
@@ -37,14 +50,37 @@ public class QuestionController {
         Map<String, Object> response = new HashMap<>();
         if (page == null || size == null) {
             Pageable pageable = PageRequest.of(0, Integer.MAX_VALUE);
-            Page<QuestionDTO> questionDTOS = questionService.findAllExcluded(pageable, searchKey, catalogId);
-            log.debug(questionDTOS.getContent());
+            Page<QuestionDTO> questionDTOS = questionService.findAllExcludeCatalog(pageable, searchKey, catalogId);
+            log.debug("[getAllExcludedCatalog] number of questions: {}", questionDTOS.getContent().size());
             response.put(PageConstants.DATA, questionDTOS);
             response.put(PageConstants.TOTAL_PAGE, 1);
             return response;
         }
         Pageable pageable = PageRequest.of(page, size);
-        Page<QuestionDTO> questionDTOS = questionService.findAllExcluded(pageable, searchKey, catalogId);
+        Page<QuestionDTO> questionDTOS = questionService.findAllExcludeCatalog(pageable, searchKey, catalogId);
+        log.debug(questionDTOS.getContent());
+        response.put(PageConstants.DATA, questionDTOS.getContent());
+        response.put(PageConstants.TOTAL_PAGE, questionDTOS.getTotalPages());
+        return response;
+    }
+
+    @GetMapping("/exclude-exam")
+    Map<String, Object> getAllExcludedExam(@RequestParam(value = "page", required = false) Integer page,
+            @RequestParam(value = "size", required = false) Integer size,
+            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+            @RequestParam(value = "exam") Long examId) {
+
+        Map<String, Object> response = new HashMap<>();
+        if (page == null || size == null) {
+            Pageable pageable = PageRequest.of(0, Integer.MAX_VALUE);
+            Page<QuestionDTO> questionDTOS = questionService.findAllExcludeExam(pageable, searchKey, examId);
+            log.debug("[getAllExcludedExam] number of questions: {}", questionDTOS.getContent().size());
+            response.put(PageConstants.DATA, questionDTOS);
+            response.put(PageConstants.TOTAL_PAGE, 1);
+            return response;
+        }
+        Pageable pageable = PageRequest.of(page, size);
+        Page<QuestionDTO> questionDTOS = questionService.findAllExcludeExam(pageable, searchKey, examId);
         log.debug(questionDTOS.getContent());
         response.put(PageConstants.DATA, questionDTOS.getContent());
         response.put(PageConstants.TOTAL_PAGE, questionDTOS.getTotalPages());

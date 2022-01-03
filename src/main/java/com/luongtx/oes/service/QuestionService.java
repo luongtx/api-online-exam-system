@@ -7,6 +7,10 @@ import org.springframework.data.domain.Pageable;
 public interface QuestionService {
     // void updateCatalogQuestion(QuestionDTO questionDTO);
     void save(QuestionDTO questionDTO);
+
     Page<QuestionDTO> findAll(Pageable pageable, String searchKey);
-    Page<QuestionDTO> findAllExcluded(Pageable pageable, String searchKey, Long catalogId);
+
+    Page<QuestionDTO> findAllExcludeCatalog(Pageable pageable, String searchKey, Long catalogId);
+
+    Page<QuestionDTO> findAllExcludeExam(Pageable pageable, String searchKey, Long examId);
 }

@@ -43,7 +43,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public Page<QuestionDTO> findAllExcluded(Pageable pageable, String searchKey, Long catalogId) {
+    public Page<QuestionDTO> findAllExcludeCatalog(Pageable pageable, String searchKey, Long catalogId) {
         return questionRepo.findAllExceptCatalog(pageable, searchKey, catalogId)
                 .map(QuestionConverter::convertEntityToDTO);
     }
@@ -68,5 +68,11 @@ public class QuestionServiceImpl implements QuestionService {
         } catch (Exception e) {
             log.error(String.format("Error while saving question: %s", dto), e);
         }
+    }
+
+    @Override
+    public Page<QuestionDTO> findAllExcludeExam(Pageable pageable, String searchKey, Long examId) {
+        return questionRepo.findAllExceptExam(pageable, searchKey, examId)
+                .map(QuestionConverter::convertEntityToDTO);
     }
 }
