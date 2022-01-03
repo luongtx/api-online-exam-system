@@ -75,4 +75,35 @@ public class QuestionServiceImpl implements QuestionService {
         return questionRepo.findAllExceptExam(pageable, searchKey, examId)
                 .map(QuestionConverter::convertEntityToDTO);
     }
+
+    @Override
+    public Page<QuestionDTO> findAllByCatalog(Pageable pageable, String searchKey, Long catalogId) {
+        return questionRepo.findAllByCatalog(catalogId, pageable, searchKey)
+                .map(QuestionConverter::convertEntityToDTO);
+    }
+
+    @Override
+    public Page<QuestionDTO> findAllByExam(Pageable pageable, String searchKey, Long examId) {
+        return questionRepo.findAllByExam(examId, pageable, searchKey)
+                .map(QuestionConverter::convertEntityToDTO);
+    }
+
+    @Override
+    public void deleteQuestion(Long questionId) {
+        questionRepo.deleteById(questionId);
+    }
+
+    @Override
+    public void deleteQuestion(Long questionId, Long catalogId, Long examId) {
+        Question question = questionRepo.getById(questionId);
+        if (catalogId != null) {
+            question.setCatalog(null);
+            questionRepo.save(question);
+        } else if (examId != null) {
+            question.setExam(null);
+            questionRepo.save(question);
+        } else {
+            questionRepo.delete(question);
+        }
+    }
 }

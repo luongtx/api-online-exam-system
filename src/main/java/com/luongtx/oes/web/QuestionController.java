@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.luongtx.oes.constants.PageConstants;
+import com.luongtx.oes.constants.RoleConstants;
 import com.luongtx.oes.dto.QuestionDTO;
 import com.luongtx.oes.service.QuestionService;
 
@@ -11,7 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,10 +35,19 @@ public class QuestionController {
     @GetMapping("/all")
     Map<String, Object> getAll(@RequestParam(value = "page", required = false) Integer page,
             @RequestParam(value = "size", required = false, defaultValue = "1000") Integer size,
-            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey) {
+            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+            @RequestParam(value = "catalog", required = false) Long catalogId,
+            @RequestParam(value = "exam", required = false) Long examId) {
         Map<String, Object> response = new HashMap<>();
         Pageable pageable = PageRequest.of(page, size);
-        Page<QuestionDTO> questionDTOS = questionService.findAll(pageable, searchKey);
+        Page<QuestionDTO> questionDTOS = null;
+        if (examId == null && examId == null) {
+            questionDTOS = questionService.findAll(pageable, searchKey);
+        } else if (catalogId != null) {
+            questionDTOS = questionService.findAllByCatalog(pageable, searchKey, catalogId);
+        } else {
+            questionDTOS = questionService.findAllByExam(pageable, searchKey, examId);
+        }
         log.debug(questionDTOS.getContent());
         response.put(PageConstants.DATA, questionDTOS.getContent());
         response.put(PageConstants.TOTAL_PAGE, questionDTOS.getTotalPages());
@@ -91,5 +104,13 @@ public class QuestionController {
     public void saveQuestion(@RequestBody QuestionDTO questionDTO) {
         log.debug(questionDTO);
         questionService.save(questionDTO);
+    }
+
+    @DeleteMapping(value = "/{id}/delete")
+    @Secured(RoleConstants.ROLE_ADMIN)
+    public void deleteQuestion(@PathVariable("id") Long questionId,
+            @RequestParam(value = "catalog", required = false) Long catalogId,
+            @RequestParam(value = "exam", required = false) Long examId) {
+        questionService.deleteQuestion(questionId, catalogId, examId);
     }
 }

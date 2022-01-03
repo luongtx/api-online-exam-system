@@ -170,7 +170,7 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public Page<QuestionDTO> findAllQuestions(Long examId, Pageable pageable) {
-        return questionRepo.findAllByExamId(examId, pageable)
+        return questionRepo.findAllByExam(examId, pageable, "")
                 .map(QuestionConverter::convertEntityToDTO);
     }
 
