@@ -34,14 +34,14 @@ public class QuestionController {
 
     @GetMapping("/all")
     Map<String, Object> getAll(@RequestParam(value = "page", required = false) Integer page,
-            @RequestParam(value = "size", required = false, defaultValue = "1000") Integer size,
-            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
-            @RequestParam(value = "catalog", required = false) Long catalogId,
-            @RequestParam(value = "exam", required = false) Long examId) {
+                               @RequestParam(value = "size", required = false, defaultValue = "1000") Integer size,
+                               @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+                               @RequestParam(value = "catalog", required = false) Long catalogId,
+                               @RequestParam(value = "exam", required = false) Long examId) {
         Map<String, Object> response = new HashMap<>();
         Pageable pageable = PageRequest.of(page, size);
-        Page<QuestionDTO> questionDTOS = null;
-        if (examId == null && examId == null) {
+        Page<QuestionDTO> questionDTOS;
+        if (examId == null && catalogId == null) {
             questionDTOS = questionService.findAll(pageable, searchKey);
         } else if (catalogId != null) {
             questionDTOS = questionService.findAllByCatalog(pageable, searchKey, catalogId);
@@ -56,9 +56,9 @@ public class QuestionController {
 
     @GetMapping("/exclude-catalog")
     Map<String, Object> getAllExcludedCatalog(@RequestParam(value = "page", required = false) Integer page,
-            @RequestParam(value = "size", required = false) Integer size,
-            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
-            @RequestParam(value = "catalog") Long catalogId) {
+                                              @RequestParam(value = "size", required = false) Integer size,
+                                              @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+                                              @RequestParam(value = "catalog") Long catalogId) {
 
         Map<String, Object> response = new HashMap<>();
         if (page == null || size == null) {
@@ -79,9 +79,9 @@ public class QuestionController {
 
     @GetMapping("/exclude-exam")
     Map<String, Object> getAllExcludedExam(@RequestParam(value = "page", required = false) Integer page,
-            @RequestParam(value = "size", required = false) Integer size,
-            @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
-            @RequestParam(value = "exam") Long examId) {
+                                           @RequestParam(value = "size", required = false) Integer size,
+                                           @RequestParam(value = "search", required = false, defaultValue = "") String searchKey,
+                                           @RequestParam(value = "exam") Long examId) {
 
         Map<String, Object> response = new HashMap<>();
         if (page == null || size == null) {
@@ -100,7 +100,7 @@ public class QuestionController {
         return response;
     }
 
-    @PostMapping({ "/save", "/update" })
+    @PostMapping({"/save", "/update"})
     public void saveQuestion(@RequestBody QuestionDTO questionDTO) {
         log.debug(questionDTO);
         questionService.save(questionDTO);
@@ -109,8 +109,8 @@ public class QuestionController {
     @DeleteMapping(value = "/{id}/delete")
     @Secured(RoleConstants.ROLE_ADMIN)
     public void deleteQuestion(@PathVariable("id") Long questionId,
-            @RequestParam(value = "catalog", required = false) Long catalogId,
-            @RequestParam(value = "exam", required = false) Long examId) {
+                               @RequestParam(value = "catalog", required = false) Long catalogId,
+                               @RequestParam(value = "exam", required = false) Long examId) {
         questionService.deleteQuestion(questionId, catalogId, examId);
     }
 }

@@ -12,3 +12,13 @@ spring:
       max-request-size: 5MB
   profiles:
     active: local
+logging:
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d %-5level [%thread] %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger{0} : %msg%n"
+  level:
+    org.springframework.web: OFF
+    com.luongtx.oes: DEBUG
+    org.hibernate: OFF
