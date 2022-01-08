@@ -27,11 +27,18 @@ public interface QuestionRepo extends JpaRepository<Question, Long> {
 	@Query("select q from question q where q.content like  %?1%")
 	Page<Question> findAll(Pageable pageable, String searchKey);
 
-	@Query("select q from question q where q.content like %?1% and (q.catalog.id is null or q.catalog.id <> ?2) order by q.id")
+	@Query("select q from question q left join catalog c on q.catalog.id=c.id "
+			+ "where q.content like %?1% "
+			+ "and (q.catalog.id is null or q.catalog.id <> ?2) "
+			+ "and (c.catalogParent.id is null or c.catalogParent.id <> ?2) "
+			+ "order by q.id")
 	Page<Question> findAllExceptCatalog(Pageable pageable, String searchKey, Long catalogId);
 
 	List<Question> findAllByIdIn(List<Long> ids);
 
-	@Query("select q from question q where q.content like %?1% and (q.exam.id is null or q.exam.id <> ?2) order by q.id")
+	@Query("select q from question q "
+			+ "where q.content like %?1% "
+			+ "and (q.exam.id is null or q.exam.id <> ?2) "
+			+ "order by q.id")
 	Page<Question> findAllExceptExam(Pageable pageable, String searchKey, Long examId);
 }

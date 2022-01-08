@@ -76,7 +76,8 @@ public class Question {
                 "id=" + id +
                 ", content='" + content + '\'' +
                 ", answers=" + answers +
-                ", examId=" + exam.getId() +
+                ", examId=" + (exam != null ? exam.getId() : null) +
+                ", catalogId=" + (catalog != null ? catalog.getId() : null) +
                 '}';
     }
 }

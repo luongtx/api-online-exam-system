@@ -33,7 +33,19 @@ class OnlineExaminationSystemApplicationTests {
         Long catalogId = 1L;
         Page<Question> questions = questionRepo.findAllExceptCatalog(pageable, searchTerm, catalogId);
         log.debug(questions.getContent());
-        Assertions.assertEquals(3, questions.getContent().size());
+        int expected = 2;
+        Assertions.assertEquals(expected, questions.getContent().size());
+    }
+
+    @Test
+    void findQuestionExcept2() {
+        Pageable pageable = PageRequest.of(0, Integer.MAX_VALUE);
+        String searchTerm = "";
+        Long catalogId = 2L;
+        Page<Question> questions = questionRepo.findAllExceptCatalog(pageable, searchTerm, catalogId);
+        log.debug(questions.getContent());
+        int expected = 4;
+        Assertions.assertEquals(expected, questions.getContent().size());
     }
 
 }
