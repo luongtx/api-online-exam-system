@@ -18,7 +18,7 @@ import com.luongtx.oes.repository.ExamRepo;
 import com.luongtx.oes.repository.QuestionRepo;
 import com.luongtx.oes.repository.UserExamRepo;
 import com.luongtx.oes.repository.UserRepo;
-import com.luongtx.oes.repository.specification.QuestionSpecifications;
+import com.luongtx.oes.repository.specification.QuestionSpecs;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.utils.FileUtils;
@@ -172,7 +172,7 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public Page<QuestionDTO> findAllQuestions(Long examId, Pageable pageable) {
-        Specification<Question> specification = QuestionSpecifications.findAllByExam("", examId);
+        Specification<Question> specification = QuestionSpecs.inExamAndContentLike("", examId);
         return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }

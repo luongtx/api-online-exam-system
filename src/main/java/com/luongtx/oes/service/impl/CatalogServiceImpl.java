@@ -10,7 +10,7 @@ import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.CatalogRepo;
 import com.luongtx.oes.repository.QuestionRepo;
-import com.luongtx.oes.repository.specification.QuestionSpecifications;
+import com.luongtx.oes.repository.specification.QuestionSpecs;
 import com.luongtx.oes.service.CatalogService;
 import com.luongtx.oes.utils.converter.QuestionConverter;
 
@@ -56,7 +56,7 @@ public class CatalogServiceImpl implements CatalogService {
 
 	@Override
 	public Page<QuestionDTO> findAllQuestions(Long catalogId, Pageable pageable, String searchKey) {
-		Specification<Question> specification = QuestionSpecifications.findAllByCatalog(searchKey, catalogId);
+		Specification<Question> specification = QuestionSpecs.inCatalogAndContentLike(searchKey, catalogId);
 		return questionRepo.findAll(specification, pageable)
 				.map(QuestionConverter::convertEntityToDTO);
 	}
@@ -73,7 +73,7 @@ public class CatalogServiceImpl implements CatalogService {
 	public void saveQuestions(Long catalogId, List<Long> questionIds) {
 		Catalog catalog = catalogRepo.getById(catalogId);
 		log.debug(catalog);
-		Specification<Question> specification = QuestionSpecifications.findByIdIn(questionIds);
+		Specification<Question> specification = QuestionSpecs.hasIdIn(questionIds);
 		List<Question> questions = questionRepo.findAll(specification);
 		log.debug(questions);
 		questions.forEach(question -> {
@@ -124,7 +124,7 @@ public class CatalogServiceImpl implements CatalogService {
 	}
 
 	long countQuestionsByCatalogId(Long catalogId) {
-		Specification<Question> specification = QuestionSpecifications.findAllByCatalog(catalogId);
+		Specification<Question> specification = QuestionSpecs.inCatalog(catalogId);
 		return questionRepo.findAll(specification).size();
 	}
 

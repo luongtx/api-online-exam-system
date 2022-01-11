@@ -19,9 +19,9 @@ import com.luongtx.oes.utils.StringUtils;
 
 import org.springframework.data.jpa.domain.Specification;
 
-public class QuestionSpecifications {
+public class QuestionSpecs {
 
-	public static Specification<Question> findQuestionsNotInCatalog(String keyword, Long catalogId) {
+	public static Specification<Question> notInCatalog(String keyword, Long catalogId) {
 		return (root, query, cb) -> {
 			Join<Question, Catalog> catalog = root.join(CATALOG, JoinType.LEFT);
 			Predicate contentLikePred = cb.like(root.get(CONTENT), StringUtils.toSearchString(keyword));
@@ -41,7 +41,7 @@ public class QuestionSpecifications {
 		};
 	}
 
-	public static Specification<Question> findQuestionsNotInExam(String keyword, Long examId) {
+	public static Specification<Question> notInExam(String keyword, Long examId) {
 		return (root, query, cb) -> {
 			Predicate contentLikePred = cb.like(root.get(CONTENT), StringUtils.toSearchString(keyword));
 			Path<Long> examIdPath = root.get(EXAM).get(ID);
@@ -53,13 +53,13 @@ public class QuestionSpecifications {
 		};
 	}
 
-	public static Specification<Question> findAll(String keyword) {
+	public static Specification<Question> hasContentLike(String keyword) {
 		return (root, query, cb) -> {
 			return cb.like(root.get(CONTENT), StringUtils.toSearchString(keyword));
 		};
 	}
 
-	public static Specification<Question> findAllByCatalog(Long catalogId) {
+	public static Specification<Question> inCatalog(Long catalogId) {
 		return (root, query, cb) -> {
 			Predicate catalogIdEquals = cb.equal(root.get(CATALOG).get(ID), catalogId);
 			Predicate catalogParentIdEquals = cb.equal(root.get(CATALOG).get(CATALOG_PARENT).get(ID), catalogId);
@@ -68,11 +68,11 @@ public class QuestionSpecifications {
 		};
 	}
 
-	public static Specification<Question> findAllByCatalog(String keyword, Long catalogId) {
-		return findAll(keyword).and(findAllByCatalog(catalogId));
+	public static Specification<Question> inCatalogAndContentLike(String keyword, Long catalogId) {
+		return hasContentLike(keyword).and(inCatalog(catalogId));
 	}
 
-	public static Specification<Question> findAllByExam(String keyword, Long examId) {
+	public static Specification<Question> inExamAndContentLike(String keyword, Long examId) {
 		return (root, query, cb) -> {
 			Predicate contentLikePred = cb.like(root.get(CONTENT), StringUtils.toSearchString(keyword));
 			Predicate examIdEquals = cb.equal(root.get(EXAM).get(ID), examId);
@@ -81,7 +81,7 @@ public class QuestionSpecifications {
 		};
 	}
 
-	public static Specification<Question> findByIdIn(List<Long> ids) {
+	public static Specification<Question> hasIdIn(List<Long> ids) {
 		return (root, query, cb) -> {
 			return root.get(ID).in(ids);
 		};
