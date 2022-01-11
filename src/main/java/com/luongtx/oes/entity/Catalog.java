@@ -38,7 +38,7 @@ public class Catalog {
     private String name;
 
     @OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
-    @JsonManagedReference
+    // @JsonManagedReference
     private List<Question> questions = new ArrayList<>();
 
     @ManyToOne

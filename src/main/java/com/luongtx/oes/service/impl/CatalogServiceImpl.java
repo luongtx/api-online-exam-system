@@ -10,12 +10,14 @@ import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.CatalogRepo;
 import com.luongtx.oes.repository.QuestionRepo;
+import com.luongtx.oes.repository.specification.QuestionSpecifications;
 import com.luongtx.oes.service.CatalogService;
 import com.luongtx.oes.utils.converter.QuestionConverter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.log4j.Log4j2;
@@ -54,7 +56,8 @@ public class CatalogServiceImpl implements CatalogService {
 
 	@Override
 	public Page<QuestionDTO> findAllQuestions(Long catalogId, Pageable pageable, String searchKey) {
-		return questionRepo.findAllByCatalog(catalogId, pageable, searchKey)
+		Specification<Question> specification = QuestionSpecifications.findAllByCatalog(searchKey, catalogId);
+		return questionRepo.findAll(specification, pageable)
 				.map(QuestionConverter::convertEntityToDTO);
 	}
 
@@ -70,7 +73,8 @@ public class CatalogServiceImpl implements CatalogService {
 	public void saveQuestions(Long catalogId, List<Long> questionIds) {
 		Catalog catalog = catalogRepo.getById(catalogId);
 		log.debug(catalog);
-		List<Question> questions = questionRepo.findAllByIdIn(questionIds);
+		Specification<Question> specification = QuestionSpecifications.findByIdIn(questionIds);
+		List<Question> questions = questionRepo.findAll(specification);
 		log.debug(questions);
 		questions.forEach(question -> {
 			question.setCatalog(catalog);
@@ -102,7 +106,7 @@ public class CatalogServiceImpl implements CatalogService {
 		if (catalog.getCatalogParent() != null) {
 			catalogDTO.setParentId(catalog.getCatalogParent().getId());
 		}
-		long numberOfQuestions = questionRepo.countQuestionsByCatalogId(catalog.getId());
+		long numberOfQuestions = countQuestionsByCatalogId(catalog.getId());
 		log.info(String.valueOf(numberOfQuestions));
 		catalogDTO.setNumberOfQuestions(numberOfQuestions);
 		return catalogDTO;
@@ -119,13 +123,9 @@ public class CatalogServiceImpl implements CatalogService {
 		return catalog;
 	}
 
-	// @Override
-	// public void saveQuestion(QuestionDTO dto) {
-	// 	try {
-
-	// 	} catch (Exception e) {
-	// 		log.error(String.format("Error while saving question: %s", dto), e);
-	// 	}
-	// }
+	long countQuestionsByCatalogId(Long catalogId) {
+		Specification<Question> specification = QuestionSpecifications.findAllByCatalog(catalogId);
+		return questionRepo.findAll(specification).size();
+	}
 
 }

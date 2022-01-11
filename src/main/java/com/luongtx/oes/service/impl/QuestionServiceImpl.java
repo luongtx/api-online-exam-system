@@ -12,6 +12,7 @@ import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.repository.CatalogRepo;
 import com.luongtx.oes.repository.ExamRepo;
 import com.luongtx.oes.repository.QuestionRepo;
+import com.luongtx.oes.repository.specification.QuestionSpecifications;
 import com.luongtx.oes.service.QuestionService;
 import com.luongtx.oes.utils.converter.AnswerConverter;
 import com.luongtx.oes.utils.converter.QuestionConverter;
@@ -19,6 +20,7 @@ import com.luongtx.oes.utils.converter.QuestionConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.log4j.Log4j2;
@@ -38,13 +40,16 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Page<QuestionDTO> findAll(Pageable pageable, String searchKey) {
-        return questionRepo.findAll(pageable, searchKey)
+        Specification<Question> specification = QuestionSpecifications.findAll(searchKey);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }
 
     @Override
     public Page<QuestionDTO> findAllExcludeCatalog(Pageable pageable, String searchKey, Long catalogId) {
-        return questionRepo.findAllExceptCatalog(pageable, searchKey, catalogId)
+        Specification<Question> specification = QuestionSpecifications
+                .findQuestionsNotInCatalog(searchKey, catalogId);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }
 
@@ -72,19 +77,22 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Page<QuestionDTO> findAllExcludeExam(Pageable pageable, String searchKey, Long examId) {
-        return questionRepo.findAllExceptExam(pageable, searchKey, examId)
+        Specification<Question> specification = QuestionSpecifications.findQuestionsNotInExam(searchKey, examId);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }
 
     @Override
     public Page<QuestionDTO> findAllByCatalog(Pageable pageable, String searchKey, Long catalogId) {
-        return questionRepo.findAllByCatalog(catalogId, pageable, searchKey)
+        Specification<Question> specification = QuestionSpecifications.findAllByCatalog(searchKey, catalogId);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }
 
     @Override
     public Page<QuestionDTO> findAllByExam(Pageable pageable, String searchKey, Long examId) {
-        return questionRepo.findAllByExam(examId, pageable, searchKey)
+        Specification<Question> specification = QuestionSpecifications.findAllByExam(searchKey, examId);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
     }
 

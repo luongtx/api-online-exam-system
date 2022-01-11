@@ -18,6 +18,7 @@ import com.luongtx.oes.repository.ExamRepo;
 import com.luongtx.oes.repository.QuestionRepo;
 import com.luongtx.oes.repository.UserExamRepo;
 import com.luongtx.oes.repository.UserRepo;
+import com.luongtx.oes.repository.specification.QuestionSpecifications;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.utils.FileUtils;
@@ -29,6 +30,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -77,7 +79,7 @@ public class ExamServiceImpl implements ExamService {
     @Override
     public ExamDTO findDetailById(Long id) {
         Exam exam = findById(id);
-        int numberOfQuestions = findNumberOfQuestions(id);
+        int numberOfQuestions = exam.getQuestions().size();
         exam.setNumberOfQuestions(numberOfQuestions);
         return convertToExamDTO(exam);
     }
@@ -170,12 +172,9 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public Page<QuestionDTO> findAllQuestions(Long examId, Pageable pageable) {
-        return questionRepo.findAllByExam(examId, pageable, "")
+        Specification<Question> specification = QuestionSpecifications.findAllByExam("", examId);
+        return questionRepo.findAll(specification, pageable)
                 .map(QuestionConverter::convertEntityToDTO);
-    }
-
-    public int findNumberOfQuestions(Long id) {
-        return questionRepo.countQuestionsByExamId(id);
     }
 
     public void updateUserExamResult(String userToken, Long examId, ExamResultDTO resultDTO) {

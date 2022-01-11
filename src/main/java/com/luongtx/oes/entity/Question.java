@@ -53,7 +53,7 @@ public class Question {
 
     @ManyToOne
     @JoinColumn(name = "CATALOG_ID")
-    @JsonBackReference
+    // @JsonBackReference
     private Catalog catalog;
 
     public List<Long> getCorrectAnswers() {
