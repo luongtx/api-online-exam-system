@@ -1,17 +1,21 @@
 package com.luongtx.oes.service.impl;
 
+import java.util.Optional;
+
 import com.luongtx.oes.config.ResourcePathConfig;
 import com.luongtx.oes.dto.ProfileDTO;
 import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
+import com.luongtx.oes.repository.specification.ProfileSpecs;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
 import com.luongtx.oes.utils.FileUtils;
 import com.luongtx.oes.utils.ImageUtils;
-
 import com.luongtx.oes.utils.converter.ProfileConverter;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -35,7 +39,7 @@ public class ProfileServiceImpl implements ProfileService {
         Profile profile = retrieveProfileFromToken(userToken);
         String profileImage = resolveProfileImage(profile.getImageSrc());
         profile.setImageSrc(profileImage);
-//        log.debug(profile);
+        // log.debug(profile);
         return ProfileConverter.convertToProfileDTO(profile);
     }
 
@@ -48,7 +52,7 @@ public class ProfileServiceImpl implements ProfileService {
             profile.setGender(profileDTO.getGender());
             profile.setPhoneNo(profileDTO.getPhoneNo());
             profile.setBirthDay(profileDTO.getBirthDay());
-//            log.debug(profile);
+            // log.debug(profile);
             profileRepo.save(profile);
         } catch (Exception e) {
             log.error(e.getMessage());
@@ -72,12 +76,14 @@ public class ProfileServiceImpl implements ProfileService {
 
     Profile retrieveProfileFromToken(String token) {
         String username = jwtTokenUtil.getUsernameFromToken(token.substring(7));
-        return profileRepo.findByUsername(username);
+        Specification<Profile> specification = ProfileSpecs.hasUsername(username);
+        Optional<Profile> optional = profileRepo.findOne(specification);
+        return optional.get();
     }
 
     String resolveProfileImage(String imageSrc) {
         if (imageSrc == null) {
-            imageSrc = pathConfig.getUploadPath() +  pathConfig.getDefaultProfileImage();
+            imageSrc = pathConfig.getUploadPath() + pathConfig.getDefaultProfileImage();
         }
         return ImageUtils.encodeToBased64(imageSrc);
     }

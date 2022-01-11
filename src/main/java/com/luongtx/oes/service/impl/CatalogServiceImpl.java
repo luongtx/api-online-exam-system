@@ -10,6 +10,7 @@ import com.luongtx.oes.entity.Question;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.CatalogRepo;
 import com.luongtx.oes.repository.QuestionRepo;
+import com.luongtx.oes.repository.specification.CatalogSpecs;
 import com.luongtx.oes.repository.specification.QuestionSpecs;
 import com.luongtx.oes.service.CatalogService;
 import com.luongtx.oes.utils.converter.QuestionConverter;
@@ -38,7 +39,8 @@ public class CatalogServiceImpl implements CatalogService {
 
 	@Override
 	public Page<CatalogDTO> findAll(Pageable pageable, String searchKey) {
-		Page<Catalog> categoryPage = catalogRepo.findAll(pageable, searchKey);
+		Specification<Catalog> specification = CatalogSpecs.hasNameLike(searchKey);
+		Page<Catalog> categoryPage = catalogRepo.findAll(specification, pageable);
 		return categoryPage.map(this::convertToDTO);
 	}
 

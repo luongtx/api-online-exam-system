@@ -18,7 +18,9 @@ import com.luongtx.oes.repository.ExamRepo;
 import com.luongtx.oes.repository.QuestionRepo;
 import com.luongtx.oes.repository.UserExamRepo;
 import com.luongtx.oes.repository.UserRepo;
+import com.luongtx.oes.repository.specification.ExamSpecs;
 import com.luongtx.oes.repository.specification.QuestionSpecs;
+import com.luongtx.oes.repository.specification.UserExamSpecs;
 import com.luongtx.oes.security.utils.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.utils.FileUtils;
@@ -68,7 +70,8 @@ public class ExamServiceImpl implements ExamService {
 
     @Override
     public Page<ExamDTO> findAll(Pageable pageable, String searchKey) {
-        Page<Exam> pageExams = examRepo.findAll(pageable, searchKey);
+        Specification<Exam> specification = ExamSpecs.hasFieldValueLike(searchKey);
+        Page<Exam> pageExams = examRepo.findAll(specification, pageable);
         return pageExams.map(this::convertToExamDTO);
     }
 
@@ -110,7 +113,8 @@ public class ExamServiceImpl implements ExamService {
         List<ExamResultDTO> examResultDTOS = new ArrayList<>();
         User user = getUserFromToken(userToken);
         Pageable pageable = PageRequest.of(0, 5);
-        List<UserExam> userExams = userExamRepo.getMostRecentByUserId(user.getId(), pageable);
+        Specification<UserExam> specification = UserExamSpecs.mostRecentExamByUser(user.getId());
+        List<UserExam> userExams = userExamRepo.findAll(specification, pageable);
         // log.info(userExams.toString());
         for (UserExam userExam : userExams) {
             ExamResultDTO dto = convertToExamResultDTO(userExam);

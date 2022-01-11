@@ -1,10 +1,10 @@
 package com.luongtx.oes.repository.specification;
 
-import static com.luongtx.oes.constants.SpecificationConstants.CATALOG;
-import static com.luongtx.oes.constants.SpecificationConstants.CATALOG_PARENT;
-import static com.luongtx.oes.constants.SpecificationConstants.CONTENT;
-import static com.luongtx.oes.constants.SpecificationConstants.EXAM;
-import static com.luongtx.oes.constants.SpecificationConstants.ID;
+import static com.luongtx.oes.constants.SpecConstants.CATALOG;
+import static com.luongtx.oes.constants.SpecConstants.CATALOG_PARENT;
+import static com.luongtx.oes.constants.SpecConstants.CONTENT;
+import static com.luongtx.oes.constants.SpecConstants.EXAM;
+import static com.luongtx.oes.constants.SpecConstants.ID;
 
 import java.util.List;
 
