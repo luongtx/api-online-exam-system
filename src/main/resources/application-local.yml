@@ -7,7 +7,7 @@ spring:
     resources:
       static-locations: file:///${upload.path}
 upload:
-  path: src/main/resources/uploads/
+  path: /home/ec2-user/uploads/
   default-profile-image: avatar.png
   default-cert-image: cert-1.jpg
 jwt:
