@@ -5,7 +5,9 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: update
-
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
   servlet:
     multipart:
       max-file-size: 5MB
