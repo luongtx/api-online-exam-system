@@ -1,18 +1,25 @@
 image: java:8
 stages:
-  - build
+  - test
   - verify
   - deploy
 build:
   stage: build
-  script: mvn package
+  script: ./mvnw clean install
   artifacts:
     paths:
-      - target/online-examination-system-0.0.1-SNAPSHOT.jar
+      - target/site/jacoco/jacoco.csv
+test:
+  stage: test
+  script: ./mvnw test
+  artifacts:
+    paths:
       - target/site/jacoco/jacoco.csv
 verify:
   stage: verify
-  script: cat site/jacoco/jacoco.csv
+  script:
+    - cat /etc/os-release
+    - cat site/jacoco/jacoco.csv
 production:
   stage: deploy
   script:
