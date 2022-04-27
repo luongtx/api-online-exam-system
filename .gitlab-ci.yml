@@ -1,0 +1,21 @@
+image: java:8
+stages:
+  - build
+  - verify
+  - deploy
+build:
+  stage: build
+  script: ./mvnw package
+  artifacts:
+    paths:
+      - target/online-exam-system-0.0.1-SNAPSHOT.jar
+      - site/jacoco/jacoco.csv
+verify:
+  stage: verify
+  script: cat site/jacoco/jacoco.csv
+production:
+  stage: deploy
+  script:
+    - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
+    - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io
+    - ./cf push
