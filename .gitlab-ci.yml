@@ -3,12 +3,12 @@ stages:
   - test
   - verify
   - deploy
-build:
-  stage: build
-  script: ./mvnw clean install
-  artifacts:
-    paths:
-      - target/site/jacoco/jacoco.csv
+#build:
+#  stage: build
+#  script: ./mvnw clean install
+#  artifacts:
+#    paths:
+#      - target/site/jacoco/jacoco.csv
 test:
   stage: test
   script: ./mvnw test
