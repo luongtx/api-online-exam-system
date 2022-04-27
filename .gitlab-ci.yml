@@ -5,7 +5,7 @@ stages:
   - deploy
 build:
   stage: build
-  script: ./mvnw package
+  script: mvn package
   artifacts:
     paths:
       - target/online-examination-system-0.0.1-SNAPSHOT.jar
