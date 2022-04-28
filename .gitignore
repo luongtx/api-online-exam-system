@@ -34,5 +34,4 @@ build/
 
 logs/
 /bin/
-src/test/**
 note.txt
