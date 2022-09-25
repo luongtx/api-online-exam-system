@@ -16,7 +16,7 @@ import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
 import com.luongtx.oes.repository.RoleRepo;
 import com.luongtx.oes.repository.UserRepo;
-import com.luongtx.oes.security.utils.JwtTokenUtil;
+import com.luongtx.oes.security.JwtTokenUtil;
 import com.luongtx.oes.service.AuthenticationService;
 
 import org.springframework.beans.factory.annotation.Autowired;

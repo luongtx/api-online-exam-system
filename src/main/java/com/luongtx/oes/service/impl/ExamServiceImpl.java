@@ -21,7 +21,7 @@ import com.luongtx.oes.repository.UserRepo;
 import com.luongtx.oes.repository.specification.ExamSpecs;
 import com.luongtx.oes.repository.specification.QuestionSpecs;
 import com.luongtx.oes.repository.specification.UserExamSpecs;
-import com.luongtx.oes.security.utils.JwtTokenUtil;
+import com.luongtx.oes.security.JwtTokenUtil;
 import com.luongtx.oes.service.ExamService;
 import com.luongtx.oes.utils.FileUtils;
 import com.luongtx.oes.utils.ImageUtils;

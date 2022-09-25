@@ -1,10 +1,8 @@
-package com.luongtx.oes.security.config;
+package com.luongtx.oes.security;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import com.luongtx.oes.security.filter.JwtRequestFilter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

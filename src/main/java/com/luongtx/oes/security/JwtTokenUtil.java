@@ -1,4 +1,4 @@
-package com.luongtx.oes.security.utils;
+package com.luongtx.oes.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

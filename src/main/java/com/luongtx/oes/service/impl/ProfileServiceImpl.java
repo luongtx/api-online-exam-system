@@ -8,7 +8,7 @@ import com.luongtx.oes.entity.Profile;
 import com.luongtx.oes.exception.ApplicationUserException;
 import com.luongtx.oes.repository.ProfileRepo;
 import com.luongtx.oes.repository.specification.ProfileSpecs;
-import com.luongtx.oes.security.utils.JwtTokenUtil;
+import com.luongtx.oes.security.JwtTokenUtil;
 import com.luongtx.oes.service.ProfileService;
 import com.luongtx.oes.utils.FileUtils;
 import com.luongtx.oes.utils.ImageUtils;
