@@ -1,4 +1,4 @@
-package com.luongtx.oes;
+package com.luongtx.oes.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
