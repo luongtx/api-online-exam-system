@@ -74,6 +74,6 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         AntPathMatcher pathMatcher = new AntPathMatcher();
         String servletPath = request.getServletPath();
         return pathMatcher.match("/exams/**", servletPath)
-                || pathMatcher.match("/swagger**", servletPath);
+                || pathMatcher.match("/swagger-ui/**", servletPath);
     }
 }

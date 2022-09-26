@@ -5,12 +5,14 @@ import com.luongtx.oes.constants.ValidationConstant;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 public class RegisterRequestDTO {
 
