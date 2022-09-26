@@ -23,10 +23,4 @@ public class LoggingAspect {
 		log.info("Response from {} returned with value: {}", joinPoint, result);
 	}
 
-    @AfterThrowing(value = CommonJoinPoint.SERVICE_LAYER_EXECUTION, throwing = "ex")
-    public void afterThrowingAdvice(JoinPoint joinPoint, Exception ex) {
-        log.info("Exception throwing in method: {} with message: {}", joinPoint.getSignature(), ex.getMessage());
-        log.trace("Exception Details: ", ex);
-    }
-
 }

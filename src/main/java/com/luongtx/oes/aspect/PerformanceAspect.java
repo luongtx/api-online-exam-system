@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Log4j2
 public class PerformanceAspect {
-	@Around(CommonJoinPoint.WEB_LAYER_EXECUTION)
+	@Around(CommonJoinPoint.SERVICE_LAYER_EXECUTION)
 	public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 		Object retVal = joinPoint.proceed();
