@@ -13,12 +13,12 @@ import org.springframework.stereotype.Component;
 @Log4j2
 public class LoggingAspect {
 
-	@Before(CommonJoinPoint.WEB_LAYER_EXECUTION)
+	@Before("com.luongtx.oes.aspect.CommonPointcuts.webLayerExecution()")
 	public void before(JoinPoint joinPoint) {
 		log.info("Request is coming through {} with parameters: {}", joinPoint, joinPoint.getArgs());
 	}
 
-	@AfterReturning(pointcut = CommonJoinPoint.WEB_LAYER_EXECUTION, returning = "result")
+	@AfterReturning(pointcut = "com.luongtx.oes.aspect.CommonPointcuts.webLayerExecution()", returning = "result")
 	public void afterReturning(JoinPoint joinPoint, Object result) {
 		log.info("Response from {} returned with value: {}", joinPoint, result);
 	}

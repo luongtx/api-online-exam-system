@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExceptionAspect {
 
-    @Around(CommonJoinPoint.SERVICE_LAYER_EXECUTION)
+    @Around("com.luongtx.oes.aspect.CommonPointcuts.serviceLayerExecution()")
     public void handle(ProceedingJoinPoint joinPoint) {
         try {
             joinPoint.proceed();
