@@ -15,6 +15,7 @@ import com.luongtx.oes.repository.specification.QuestionSpecs;
 import com.luongtx.oes.service.CatalogService;
 import com.luongtx.oes.utils.converter.QuestionConverter;
 
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +26,7 @@ import lombok.extern.log4j.Log4j2;
 
 @Service
 @Log4j2
+@Builder
 public class CatalogServiceImpl implements CatalogService {
 	@Autowired
 	CatalogRepo catalogRepo;
@@ -34,6 +36,11 @@ public class CatalogServiceImpl implements CatalogService {
 
 	@Override
 	public List<CatalogDTO> findAll() {
+//		try {
+//			Thread.sleep(3000);
+//		} catch (InterruptedException e) {
+//			throw new RuntimeException(e);
+//		}
 		return catalogRepo.findAll().stream().map(this::convertToDTO).collect(Collectors.toList());
 	}
 
@@ -109,7 +116,6 @@ public class CatalogServiceImpl implements CatalogService {
 			catalogDTO.setParentId(catalog.getCatalogParent().getId());
 		}
 		long numberOfQuestions = countQuestionsByCatalogId(catalog.getId());
-		log.info(String.valueOf(numberOfQuestions));
 		catalogDTO.setNumberOfQuestions(numberOfQuestions);
 		return catalogDTO;
 	}

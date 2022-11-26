@@ -12,3 +12,5 @@ upload:
   default-cert-image: cert-1.jpg
 jwt:
   secret: luongtx
+aspectj:
+  enabled: true

@@ -18,7 +18,7 @@ public class LoggingAspect {
 		log.info("Request is coming through {} with parameters: {}", joinPoint, joinPoint.getArgs());
 	}
 
-	@AfterReturning(pointcut = "com.luongtx.oes.aspect.CommonPointcuts.webLayerExecution()", returning = "result")
+	@AfterReturning(pointcut = " com.luongtx.oes.aspect.CommonPointcuts.webLayerExecution() || com.luongtx.oes.aspect.CommonPointcuts.serviceLayerExecution()", returning = "result")
 	public void afterReturning(JoinPoint joinPoint, Object result) {
 		log.info("Response from {} returned with value: {}", joinPoint, result);
 	}
