@@ -17,13 +17,14 @@ class ProfileServiceTest {
 
     @Test
     void getCurrentUserProfile() {
-        long startTime = System.currentTimeMillis();
-        try {
-            profileService.getCurrentUserProfile("1234567");
-        }catch (Exception e) {
-           log.error(e.getMessage());
-        }
-        long elapsedTime = System.currentTimeMillis() - startTime;
-        System.out.printf("Execution time: %s (ms)", elapsedTime);
+        profileService.getCurrentUserProfile("1234567");
+//        long startTime = System.currentTimeMillis();
+//        try {
+//            profileService.getCurrentUserProfile("1234566");
+//        }catch (Exception e) {
+//           log.error(e.getMessage());
+//        }
+//        long elapsedTime = System.currentTimeMillis() - startTime;
+//        System.out.printf("Execution time: %s (ms)", elapsedTime);
     }
 }

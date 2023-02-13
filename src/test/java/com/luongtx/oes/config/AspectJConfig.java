@@ -40,7 +40,7 @@ public class AspectJConfig {
         factory.setTarget(object);
         factory.addAspect(loggingAspect());
         factory.addAspect(exceptionAspect());
-//        factory.addAspect(performanceAspect());
+        factory.addAspect(performanceAspect());
         return factory.getProxy();
     }
 

@@ -15,13 +15,14 @@ class CatalogServiceTest {
 
     @Test
     void findAll() {
-        long startTime = System.currentTimeMillis();
-        try {
-            catalogService.findAll();
-        }catch (Exception e) {
-            log.error(e.getMessage());
-        }
-        long elapsedTime = System.currentTimeMillis() - startTime;
-        System.out.printf("Execution time: %s (ms)", elapsedTime);
+        catalogService.findAll();
+//        long startTime = System.currentTimeMillis();
+//        try {
+//            catalogService.findAll();
+//        }catch (Exception e) {
+//            log.error(e.getMessage());
+//        }
+//        long elapsedTime = System.currentTimeMillis() - startTime;
+//        System.out.printf("Execution time: %s (ms)", elapsedTime);
     }
 }
